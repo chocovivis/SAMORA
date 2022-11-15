@@ -1,0 +1,72 @@
+.texto {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 10px;
+    padding-left: 70px;
+}
+
+body {
+    background-color: #103444;
+    color: white;
+}
+
+.alberca {
+    width: 400px;
+    height: auto;
+}
+
+.cuarto {
+    width: 400px;
+    height: auto;
+}
+
+.huesped {
+    width: 400px;
+    height: auto;
+}
+
+.espacioImagen {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    padding-right: 10px;
+    padding-left: 70px;
+}
+
+.parrafos {
+    display: flex;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pHistoria {
+    padding-top: 50px;
+    padding-bottom: 4px;
+    padding-right: 90px;
+    padding-left: 70px;
+    width: 400px;
+}
+
+.pDireccion {
+    padding-top: 50px;
+    padding-bottom: 4px;
+    padding-right: 40px;
+    padding-left: 0px;
+    width: 400px;
+}
+
+.pTelefonos {
+    padding-top: 50px;
+    padding-bottom: 4px;
+    padding-right: 70px;
+    padding-left: 40px;
+    width: 400px;
+}

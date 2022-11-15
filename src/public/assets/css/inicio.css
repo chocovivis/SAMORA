@@ -1,0 +1,67 @@
+.fondo-inicio{
+    background-image: url(../img/playa-inicio.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.espacio-titles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.boton-res-style{
+    background-color:transparent;
+    border-color: transparent; 
+    font-weight: 200; 
+}
+.boton-ini-style{
+    background-color: #fffbf0;
+    border-radius: 2px;
+    border-color: transparent;
+    font-weight: 200;
+    padding: 10;
+    width: 400;
+    font-size: 30px;
+
+}
+.boton-sn-style{
+    background-color:transparent;
+    border-color: transparent; 
+}
+.icon-menu-style{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: baseline;
+}
+.icon-flecha-style{
+    padding: 7;
+    width: 35px;
+    height: 40px;
+}
+.div-menu{
+    display: flex;
+    flex-direction: row;
+    align-items:stretch;
+}
+.botones-altura{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    padding-bottom: 10;
+    justify-content: center;
+    align-items: center;
+}
+.elementos-dispos{
+    display: flex;
+    flex-direction: column;
+    height:100vh; 
+}
+
+.div-info-style{
+    background-color: #135c7d;
+    flex: 1;
+    padding: 7px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

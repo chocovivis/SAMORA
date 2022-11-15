@@ -1,0 +1,13 @@
+.fondo-menu{
+    Backdrop-filter: blur(24px);
+}
+.menu-size{
+    width: 200;
+    height: 200;
+}
+
+.fondo-back{
+    background-image: url(../img/playa-menu.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}

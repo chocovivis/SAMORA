@@ -26,6 +26,6 @@ app.use(express.static(path.join(__dirname,'./public')))
 //Routes
 app.use('/inicio',indexRouter);
 app.use('/menu',menuRouter);
-app.use('/menu/sobre-nosotros',QuienesSomosRouter);
+app.use('/sobre-nosotros',QuienesSomosRouter);
 export default app;
 

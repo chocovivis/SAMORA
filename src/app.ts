@@ -7,6 +7,7 @@ dotenv.config();
 import indexRouter from './routes/index.route';
 import menuRouter from "./routes/menu.route";
 import QuienesSomosRouter from './routes/Quienes_somos.route'
+import habitacionRouter from "./routes/habitacion.route";
 //inicializaciones
 const app:Application = express();
 
@@ -15,7 +16,6 @@ app.set("port", process.env.PORT || 4000);
 app.set("view engine","ejs");
 app.set('views', path.join(__dirname, './views'));
 
-//middlewares
 //middlewares
 app.use(morgan("dev"));
 app.use(express.json());
@@ -26,6 +26,7 @@ app.use(express.static(path.join(__dirname,'./public')))
 //Routes
 app.use('/inicio',indexRouter);
 app.use('/menu',menuRouter);
-app.use('/menu/sobre-nosotros',QuienesSomosRouter);
+app.use('/sobre-nosotros',QuienesSomosRouter);
+app.use('/habitaciones',habitacionRouter)
 export default app;
 

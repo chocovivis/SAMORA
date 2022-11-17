@@ -1,0 +1,42 @@
+.fondo-hab{
+    background-color: #135c7d;
+    Backdrop-filter: blur(24px);
+}
+.div-hab{
+   background-color: #fffbf0;
+   width: 600px;
+   height: 170px; 
+}
+.espacio-entre{
+    padding-bottom: 30px;
+}
+.flex{
+    display: flex;
+}
+.Space-Element{
+    margin: 1.5rem;
+  }
+.icon-hab-style{
+    width: 15rem;
+    height: 8rem;
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.boton-reservacion{
+    background-color: #135c7d;
+    width: 200px;
+    height: 50px;
+    padding: 8;
+}
+
+
+.div-datos{
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.hab-altura{
+    display: flex;
+    flex-direction: column;
+}

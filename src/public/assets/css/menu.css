@@ -11,3 +11,11 @@
     background-attachment: fixed;
     background-size: cover;
 }
+
+.botones-menu{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10;
+    justify-content: right;
+    align-items: right;
+}

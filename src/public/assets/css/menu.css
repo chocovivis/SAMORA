@@ -10,3 +10,11 @@
     background-image: url(../img/playa-menu.jpg);
     background-attachment: fixed;
 }
+
+.botones-menu{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10;
+    justify-content: right;
+    align-items: right;
+}

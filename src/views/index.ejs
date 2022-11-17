@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   
-    <%- include("comunes/componentes/headers-components") -%>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/inicio.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
     <title>BIENVENIDO</title>
 </head>
 
 <body class="fondo-inicio elementos-dispos">
+
+
+    <header class="header">
+        <div class="container">
+            <div class="btn-menu">
+                <label for="btn-menu">☰</label>
+            </div>
+            <div class="logo">
+                <h1>SAMORA</h1>
+            </div>
+            <nav class="menu">
+                <a href="#">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Blog</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <div class="capa"></div>
+    <!--	--------------->
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href="#">MENÚ</a>
+                <a href="#">Reserva de habitaciones</a>
+                <a href="#">Nuestras habitaciones</a>
+                <a href="#">Mi cuenta</a>
+                <a href="#">Servicios</a>
+                <!-- <a href="#">Mi cuenta</a> -->
+            </nav>
+            <label for="btn-menu">✖️</label>
+        </div>
+    </div>
+
+    <span class="botones-altura">
+        <button class="boton-ini-style color-primary label-font-style">Inicia sesión</button>
+        <button class="boton-res-style color-secundary label-font-style">Registrate</button>
+    </span>
 
     <div class="espacio-titles ">
         <label class="color-primary titulo-style">SAMORA</label>
@@ -43,4 +87,5 @@
             
         </span>
 </body>
+
 </html>

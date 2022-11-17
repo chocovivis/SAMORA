@@ -9,17 +9,11 @@
     justify-content: space-between;
 }
 
-
 .boton-res-style {
     background-color: transparent;
     border-color: transparent;
     font-weight: 200;
     padding: 10px;
-
-.boton-res-style{
-    background-color:transparent;
-    border-color: transparent; 
-    font-weight: 200; 
 }
 
 .boton-ini-style {

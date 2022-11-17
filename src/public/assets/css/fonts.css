@@ -23,12 +23,11 @@
     font-family: pptelegraf;
 }
 
-
-.titulo-style {
 .btn-font-style{
     font-size: 15px;
     font-family: pptelegraf;
 }
+
 .titulo-style{
     font-size: 60px;
     font-family: arsenica;
@@ -45,17 +44,11 @@
     font-family: arsenica;
 }
 
-.color-primary {
-    color: #135c7d;
-}
-
-.color-secundary {
-    color: #fffbf0
-}
 
 .color-primary{
     color:#135c7d;
     }
+
 .color-secundary{
     color:#fffbf0;
     }

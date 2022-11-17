@@ -1,0 +1,18 @@
+<form id="formStatus" action="/api/v1/example/update/<%=idStatus  %>" method="POST">
+    <label for=""> Número de habitación:
+        <input type="text" name="numHabitacion" id="numHabitacion" value="<%=numHabitacion  %> ">
+    </label>
+    <label for=""> Precio:
+        <input type="text" name="precio" id="precio" value="<%=precio %>">
+    </label>
+    <label for=""> Capacidad:
+        <input type="text" name="capacidad" id="capacidad" value="<%=capacidad %>">
+    </label>
+    <label for=""> Descripcion:
+        <input type="text" name="descripcion" id="descripcion" value="<%=descripcion %>">
+    </label>
+    <label for=""> Estado:
+        <input type="text" name="estado" id="estado" value="<%=estado %>">
+    </label>
+    <button type="submit" id="btnGuardar">Actualizar habitación</button>
+</form>

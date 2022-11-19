@@ -2,6 +2,18 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.encabezados_parrafos {
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+    font-family: pptelegraf;
+}
+
+.centrado{
+    margin: 0 auto;
+}
+
 .titulo {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -24,38 +36,46 @@ body {
     text-align: justify;
     width: 400px;
     height: 150px;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
-.encabezados{
+.encabezados {
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.columnas{
+.columnas {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.icon-menu-style{
+.icon-menu-style {
     width: 40px;
     height: 40px;
     display: flex;
     align-items: baseline;
 }
 
-.espacio-titles{
+.centrado-vertical {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.difuminado{
+    backdrop-filter: blur(10px);
+}
+
+.espacio-titles {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.pdIzq{
-    padding-left: 70px;
-}
-
-.pdDer{
-    padding-right: 70px;
+.orillas{
+    padding-left: 10px;
+    padding-right: 10px;
 }

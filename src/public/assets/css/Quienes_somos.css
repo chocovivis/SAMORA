@@ -50,6 +50,11 @@ body {
     justify-content: space-between;
 }
 
+.centrarInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
 .icon-menu-style {
     width: 40px;
     height: 40px;
@@ -66,7 +71,7 @@ body {
 }
 
 .difuminado{
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 }
 
 .espacio-titles {
@@ -78,4 +83,29 @@ body {
 .orillas{
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.padd{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.divTitulo{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divDatos{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

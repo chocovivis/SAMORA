@@ -9,6 +9,9 @@ import menuRouter from "./routes/menu.route";
 import QuienesSomosRouter from './routes/Quienes_somos.route'
 import habitacionRouter from "./routes/habitacion.route";
 import reservacionesRouter from "./routes/reservaciones.route";
+import detalleCuentaRouter from "./routes/detalle_cuenta.route";
+import addserviceRouter from "./routes/addservice.route";
+import cancelserviceRouter from "./routes/cancelservice.route";
 //inicializaciones
 const app:Application = express();
 
@@ -30,5 +33,8 @@ app.use('/menu',menuRouter);
 app.use('/sobre-nosotros',QuienesSomosRouter);
 app.use('/habitaciones',habitacionRouter);
 app.use('/reservaciones', reservacionesRouter);
+app.use('/detalle-cuenta',detalleCuentaRouter);
+app.use('/addservice',addserviceRouter);
+app.use('/cancelservice',cancelserviceRouter);
 export default app;
 

@@ -17,7 +17,7 @@ EmpleadoModel.init(
       type: DataTypes.STRING(60),
       allowNull: false,
     },
-    contrasenia: {
+    puesto: {
       type: DataTypes.STRING(10),
       allowNull: false,
     },

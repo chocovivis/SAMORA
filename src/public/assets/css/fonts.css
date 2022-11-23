@@ -23,36 +23,21 @@
     font-family: pptelegraf;
 }
 
-<<<<<<< HEAD
-.titulo-style {
-=======
 .btn-font-style{
     font-size: 15px;
     font-family: pptelegraf;
 }
 
 .titulo-style{
->>>>>>> 6562a327f0f09f32c535dfa515c431c2e4470e1a
     font-size: 60px;
     font-weight: bolder;
     font-family: pptelegraf;
 }
 
-
-<<<<<<< HEAD
 .color-primary {
     color: #135c7d;
 }
-=======
-.color-primary{
-    color:#135c7d;
-    }
 
 .color-secundary{
     color:#fffbf0;
-    }
->>>>>>> 6562a327f0f09f32c535dfa515c431c2e4470e1a
-
-.color-secundary {
-    color: #fffbf0;
 }

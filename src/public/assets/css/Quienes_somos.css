@@ -1,111 +1,32 @@
-.texto {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.fondo-menu {
+    Backdrop-filter: blur(24px);
 }
 
-.encabezados_parrafos {
-    color: #fff;
-    font-weight: 400;
-    font-size: 22px;
-    margin-left: 10px;
-    font-family: pptelegraf;
+.menu-size {
+    width: 200;
+    height: 200;
 }
 
-.centrado{
-    margin: 0 auto;
-}
-
-.titulo {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 10px;
-    padding-left: 70px;
-}
-
-body {
-    background-color: #103444;
-    color: white;
-}
-
-.imgSize {
-    width: 400px;
-    height: auto;
-}
-
-.parrafos {
-    display: flex;
-    text-align: justify;
-    width: 400px;
-    height: 150px;
-}
-
-.encabezados {
-    font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.columnas {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.centrarInfo{
-    display: flex;
-    justify-content: space-between;
-}
-
-.icon-menu-style {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: baseline;
-}
-
-.centrado-vertical {
+.botones-menu {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+    padding-bottom: 10;
+    justify-content: right;
+    align-items: right;
 }
 
-.difuminado{
-    backdrop-filter: blur(15px);
-}
-
-.espacio-titles {
-    display: flex;
-    flex-direction: row;
+.distDatos {
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.orillas{
-    padding-left: 10px;
-    padding-right: 10px;
+.divSize {
+    min-height: 100vh;
+    height: fit-content;
 }
 
-.padd{
-    padding-left: 80px;
-    padding-right: 80px;
-}
-
-.centrar{
-    text-align: center;
-}
-
-.divTitulo{
-    height: 400px;
-    width: 100%;
+.ajustarDiv {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.divDatos{
-    height: auto;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }

@@ -1,8 +1,8 @@
-import {Router} from "express";
-import { QuienesSomosController } from "../controllers/Quienes_somos.controller";
+import { Router } from "express";
+import { quienes_somosResponse } from "../controllers/quienes_somos.controller";
 
-const QuienesSomosRouter: Router = Router();
+const quienes_somosRouter: Router = Router();
 
-QuienesSomosRouter.get("/", QuienesSomosController);
+quienes_somosRouter.get("/", quienes_somosResponse);
 
-export default QuienesSomosRouter;
+export default quienes_somosRouter;

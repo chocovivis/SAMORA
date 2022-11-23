@@ -5,10 +5,9 @@ import dotenv from "dotenv";
 dotenv.config();
 //Importando rutas
 import indexRouter from './routes/index.route';
-import menuRouter from "./routes/menu.route";
-import QuienesSomosRouter from './routes/Quienes_somos.route'
 import habitacionRouter from "./routes/habitacion.route";
-
+import barra_lateralRouter from "./routes/barra_lateral.route";
+import quienes_somosRouter from "./routes/quienes_somos.route";
 //inicializaciones
 const app:Application = express();
 
@@ -26,8 +25,8 @@ app.use(express.static(path.join(__dirname,'./public')))
 
 //Routes
 app.use('/inicio',indexRouter);
-app.use('/menu',menuRouter);
-app.use('/sobre-nosotros',QuienesSomosRouter);
+app.use('/quienes-somos',quienes_somosRouter);
 app.use('/habitaciones',habitacionRouter);
+app.use('/barra_lateral',barra_lateralRouter);
 export default app;
 

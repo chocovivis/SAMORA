@@ -27,6 +27,6 @@ app.use(express.static(path.join(__dirname,'./public')))
 app.use('/inicio',indexRouter);
 app.use('/quienes-somos',quienes_somosRouter);
 app.use('/habitaciones',habitacionRouter);
-app.use('/barra_lateral',barra_lateralRouter);
+app.use('/regresa/habitacion',getHabRouter);
 export default app;
 

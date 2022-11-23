@@ -1,7 +1,8 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/database.config";
 import HabitacionType from "../types/habitacion.type";
-import EmpleadoType from "../types/habitacion.type";
+import ReservacionType from "../types/reservacion.type";
+
 
 
 
@@ -37,6 +38,7 @@ HabitacionModel.init(
     tableName: "habitacion",
   }
 );
+
 
 
 

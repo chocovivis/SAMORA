@@ -16,9 +16,9 @@ import {HabitacionModel} from "../models/habitacion.model";
   }
   
   export async function updateHabitacion(req: Request, res: Response) {
-    const {idStatus} = req.params;
+    const {numHabitacion} = req.params;
     const {precio,descripcion,estado} = req.body;
-    const entity = await HabitacionModel.findByPk(idStatus);
+    const entity = await HabitacionModel.findByPk(numHabitacion);
     entity?.update({precio,descripcion,estado});
     res.redirect("/edita/ver/formulario");
   }

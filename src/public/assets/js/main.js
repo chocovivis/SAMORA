@@ -1,6 +1,6 @@
 const main = (() => {
     const $bodyTable = document.getElementById("data");
-    const BASE_URL = "http://localhost:4000/regresa/habitacion/";
+    const BASE_URL = "http://localhost:4000/regresa/habitacion";
   
     const _getData = async () => {
       debugger;

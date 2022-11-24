@@ -1,9 +1,10 @@
 import {Router} from "express";
-import {getHabitacion, inserHabResponse} from "../controllers/inserthab.controller";
+import { getHabitacion, insertResponse } from "../controllers/inserthab.controller";
 
 const getHabRouter: Router = Router();
 
 
 getHabRouter.get("/",getHabitacion); 
-getHabRouter.get("/mostrarhabitacion",inserHabResponse);
+getHabRouter.get("/mostrarhabitacion",insertResponse);
+
 export default getHabRouter;

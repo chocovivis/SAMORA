@@ -30,26 +30,14 @@
 
 .titulo-style{
     font-size: 60px;
-    font-family: arsenica;
+    font-weight: bolder;
+    font-family: pptelegraf;
 }
 
-.subtitulo-style {
-    font-size: 40px;
-    font-family: arsenica;
+.color-primary {
+    color: #135c7d;
 }
-
-
-.subsubtitulo-style {
-    font-size: 25px;
-    font-family: arsenica;
-}
-
-
-.color-primary{
-    color:#135c7d;
-    }
 
 .color-secundary{
     color:#fffbf0;
-    }
-
+}

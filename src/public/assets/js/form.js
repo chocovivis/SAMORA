@@ -1,8 +1,8 @@
 const form = (() => {
     const $formHab = document.getElementById("formHab");
-    const $inputprecio = document.getElementById("preciof");
-    const $inputdescripcion = document.getElementById("descripcionf");
-    const $inputestado = document.getElementById("estadof");
+    const $inputprecio = document.getElementById("precio");
+    const $inputdescripcion = document.getElementById("descripcion");
+    const $inputestado = document.getElementById("estado");
     
     const request = {
       "POST":()=>{

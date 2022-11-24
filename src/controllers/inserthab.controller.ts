@@ -1,9 +1,6 @@
 import { Request, Response } from "express";
 import {HabitacionModel} from "../models/habitacion.model";
 
-export function insertResponse(req: Request, res: Response) {
-  return res .render("insert-hab"); 
-} 
 
 export async function getHabitacion(req: Request, res: Response) {
   const {query:where} = req
@@ -15,12 +12,10 @@ export async function getHabitacion(req: Request, res: Response) {
   res.status(200).json(habitaciones);
 }
 
-export async function updateHabitacion(req: Request, res: Response) {
-  const {numHabitacion} = req.params;
-  const {body} = req;
-  const entity = await HabitacionModel.findByPk(numHabitacion);
-  await entity?.update(body);
-  res.status(201).json(entity?.toJSON());
+export function inserHabResponse(req: Request, res: Response) {
+  const data = { title: "Edita las habitaciones!" };
+  return res.render("insert-hab");
 }
+
 
 

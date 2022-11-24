@@ -1,5 +1,5 @@
 const form = (() => {
-    
+    const $formHab = document.getElementById("formHab");
     const $inputprecio = document.getElementById("preciof");
     const $inputdescripcion = document.getElementById("descripcionf");
     const $inputestado = document.getElementById("estadof");
@@ -18,10 +18,10 @@ const form = (() => {
     };
     const _sendActionForm = (event = {}) => {
       event.preventDefault();
-      const method = $inputprecio.getAttribute("method");
+      const method = $formHab.getAttribute("method");
       request[method]();
   
-      if ($inputdescripcion.value === "" || $inputestado.value === "") {
+      if ($inputprecio.value==""||$inputdescripcion.value === "" || $inputestado.value === "") {
         alert("Todos los campos son requeridos");
       }
     };

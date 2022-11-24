@@ -9,6 +9,7 @@ import menuRouter from "./routes/menu.route";
 import QuienesSomosRouter from './routes/Quienes_somos.route'
 import habitacionRouter from "./routes/habitacion.route";
 import getHabRouter from "./routes/inserthab.route";
+import verFormRouter from "./routes/verForm.route";
 
 //import { habEditExample } from "./controllers/inserthab.controller";
 //inicializaciones
@@ -25,14 +26,13 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'./public')))
 
-
 //Routes
 app.use('/inicio',indexRouter);
 app.use('/menu',menuRouter);
 app.use('/sobre-nosotros',QuienesSomosRouter);
 app.use('/habitaciones',habitacionRouter);
 app.use('/regresa/habitacion',getHabRouter);
-
+app.use('/edita',verFormRouter)
 
 
 export default app;

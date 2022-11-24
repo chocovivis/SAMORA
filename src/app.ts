@@ -8,6 +8,7 @@ import indexRouter from './routes/index.route';
 import habitacionRouter from "./routes/habitacion.route";
 import barra_lateralRouter from "./routes/barra_lateral.route";
 import quienes_somosRouter from "./routes/quienes_somos.route";
+import getHabRouter from "./routes/inserthab.route";
 //inicializaciones
 const app:Application = express();
 
@@ -27,6 +28,5 @@ app.use(express.static(path.join(__dirname,'./public')))
 app.use('/inicio',indexRouter);
 app.use('/quienes-somos',quienes_somosRouter);
 app.use('/habitaciones',habitacionRouter);
-app.use('/regresa/habitacion',getHabRouter);
+app.use('/barra_lateral',barra_lateralRouter);
 export default app;
-

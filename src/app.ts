@@ -30,4 +30,3 @@ app.use('/quienes-somos',quienes_somosRouter);
 app.use('/habitaciones',habitacionRouter);
 app.use('/barra_lateral',barra_lateralRouter);
 export default app;
-

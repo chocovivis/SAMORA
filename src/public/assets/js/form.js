@@ -1,39 +1,34 @@
 const form = (() => {
-    const $formnum = document.getElementById("numHabitacion");
+    const $formHab = document.getElementById("formHab");
     const $inputprecio = document.getElementById("precio");
-    const $inputcapacidad = document.getElementById("capacidad");
     const $inputdescripcion = document.getElementById("descripcion");
     const $inputestado = document.getElementById("estado");
     
-
     const request = {
       "POST":()=>{
-        http.post({url:"http://localhost:4000/agrega/habitacion",body:{
+        http.post({url:"http://localhost:4000/regresa/habitacion",body:{
             
           }});
       },
       "PUT":() =>{
-        http.put({url:"http://localhost:4000/agrega/habitacion",body:{
+        http.put({url:"http://localhost:4000/regresa/habitacion",body:{
             
         }});
       }
     };
-  
-    
     const _sendActionForm = (event = {}) => {
       event.preventDefault();
-      const method = $formStatus.getAttribute("method");
+      const method = $formHab.getAttribute("method");
       request[method]();
   
-      if ($inputStatus.value === "" || $inputDescription.value === "") {
+      if ($inputprecio.value==""||$inputdescripcion.value === "" || $inputestado.value === "") {
         alert("Todos los campos son requeridos");
       }
     };
   
     const _addActionForm = () => {
-      $formStatus.addEventListener("submit", _sendActionForm);
+      $formHab.addEventListener("submit", _sendActionForm);
     };
-  
     return {
       init: () => {
         _addActionForm();

@@ -19,6 +19,7 @@
   "devDependencies": {
     "nodemon": "^2.0.16",
     "rimraf": "^3.0.2",
+    "sequelize-cli": "^6.5.2",
     "ts-node": "^10.8.0"
   },
   "dependencies": {

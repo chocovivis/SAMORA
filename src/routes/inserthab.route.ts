@@ -1,10 +1,14 @@
 import {Router} from "express";
-import { getHabitacion, insertResponse } from "../controllers/inserthab.controller";
+import { createHabitacion, deleteHabitacion, readHabitacion, updateHabitacion, verHabitacion } from "../controllers/inserthab.controller";;
+import storageMulter from "../middlewares/multer.middleware";
 
-const getHabRouter: Router = Router();
+const verHabRouter: Router = Router();
 
 
-getHabRouter.get("/",getHabitacion); 
-getHabRouter.get("/mostrarhabitacion",insertResponse);
+verHabRouter.get("/ver",verHabitacion); 
+verHabRouter.get("/",readHabitacion);
+verHabRouter.post("/",storageMulter.single("imagen"), createHabitacion);
+verHabRouter.post("/update/:numHabitacion",storageMulter.single("imagen"),updateHabitacion);
+verHabRouter.delete("/:idProducto",deleteHabitacion);
 
-export default getHabRouter;
+export default verHabRouter;

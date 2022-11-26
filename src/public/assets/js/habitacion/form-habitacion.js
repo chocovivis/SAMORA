@@ -1,9 +1,8 @@
-formHab.init();
 const formHab = (() => {
     const $containerForm = document.getElementById("containerForm");
     const $form = document.getElementById("formHab");
     
-    const BASE_URL = "/catalogo/habitacion";
+    const BASE_URL = "catalogo/habitacion";
     //
     const _setData = (item = {}, typeRender = "POST") => {
       const $inputPrecio = document.getElementById("precio");
@@ -30,7 +29,7 @@ const formHab = (() => {
     const _configureBtnGuardar = () => {
       const $btnGuardar = document.getElementById("btnGuardar");
       $btnGuardar.addEventListener("click", () => {
-          debugger
+        debugger
         const method = $form.getAttribute("method");
         const formData = new FormData($form);
         if (method.toUpperCase() === "POST") {
@@ -40,6 +39,7 @@ const formHab = (() => {
         if (method === "PUT") {
           _update(formData);
         }
+      
       });
     };
   

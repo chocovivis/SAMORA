@@ -1,0 +1,65 @@
+.background-reservation{
+    background-color: #064461;   
+}
+.body-container{
+  width:100%;
+}
+.padding{
+    padding-left: 2.5rem;
+}
+.body-container>tr{
+    display: flex;
+    justify-content: space-between;
+ 
+    border-bottom: 2px solid rgb(251, 250, 250);
+    padding: 1rem 2.5rem 1rem 2.5rem;
+  }
+.reservation-container{
+    margin: 3rem 8rem 3rem 8rem;
+    background-color:#064461;
+}
+.table-container{
+width: 80%;
+margin: auto;
+background-color: rgb(229, 221, 209);
+padding: 1.5rem 0.5rem 2.5rem 0.5rem;
+
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2.5rem;
+}
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border-bottom{
+border-bottom: 70px solid white;
+}
+.tr-space{
+    padding-top: 3em ;
+    padding-bottom:3em ;
+}
+.services-font{
+    color: #064461;
+    font-size: 20px;
+}
+.title-font{
+    margin:0px;
+    color: #064461;
+    font-size: 40px;  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.align-buttons{
+    display: grid;
+    justify-content: end;
+}
+.button-style{
+    border-radius: 14px;
+    color:#064461;
+    background-color: aliceblue;
+   width: 130px;
+   height: 30px;
+}

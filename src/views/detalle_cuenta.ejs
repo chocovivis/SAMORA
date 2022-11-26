@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("comunes/componentes/headers-components")-%>
+    <link rel="stylesheet" href="assets/css/detalle_cuenta.css"/>
+    
+    <title>
+    </title>
+</head>
+<body class="background-reservation">
+    <script>
+        </script>
+    <div class="reservation-container">
+        <div class="table-container">
+            <div class="padding">
+            <p class="title-font">RSV-01</p>
+            <p >Nombre del cliente</p> 
+            </div>
+
+            <table class="align">
+               
+                <tbody class="body-container">
+                    
+                    <% services.forEach((s)=>{%>
+                        <tr class="">
+                            <th><%= s.service  %></th>
+                            <th> <%= s.price %></th>
+                        </tr>
+                    <% })%>
+                
+            </tbody>
+            </table>
+            <div class="padding total">
+                <p >Total</p>
+                <p > 000.000</p> 
+            </div>
+        </div>
+    </div>
+    <div class="align-buttons">
+        <button id="btnAddSer" class="button-style" >Agregar Servicio</button>
+        <button id="btnCanSer" class="button-style">Cancelar Servicio</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("comunes/componentes/headers-components")-%>
+    <link rel="stylesheet" href="assets/css/cancelservice.css"/>
+    <title>
+    </title>
+</head>
+<body class="background-reservation">
+        <div class="reservation-container">
+            <div>
+            <p class="title-font"> RSV-01</p>
+            <p class="text">Nombre del cliente</p>
+             </div>
+            <div class="container-select">
+                <select name="Servicio" class="style-select">
+                    <option value="" selected disabled hidden>Seleccione Servicio a Cancelar</option>
+                    <option value="value1">Restaurant</option>
+                    <option value="value2">Taxi</option>
+                    <option value="value3">Masaje</option>
+                  </select>
+            </div>
+            <div class="align-buttons">
+                <button id="btnAddSer" class="button-style" >Aceptar</button>
+                <button id="btnCanSer" class="button-style">Cancelar</button>
+            </div>
+        </div> 
+
+</body>
+
+</html>

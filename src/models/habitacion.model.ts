@@ -4,8 +4,6 @@ import HabitacionType from "../types/habitacion.type";
 import ReservacionType from "../types/reservacion.type";
 
 
-
-
 export class HabitacionModel extends Model<HabitacionType> {}
 
 HabitacionModel.init(
@@ -32,6 +30,10 @@ HabitacionModel.init(
         type: DataTypes.BOOLEAN,
         allowNull: false,
     },
+    url_imagen:{
+      type: DataTypes.STRING(45),
+      allowNull: true,
+    }
   },
   {
     sequelize,

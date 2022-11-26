@@ -4,5 +4,6 @@ export default interface HabitacionType {
     capacidad?: number;
     descripcion?:string;
     estado?:boolean;
+    url_imagen?:string;
   }
   

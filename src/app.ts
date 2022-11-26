@@ -12,8 +12,9 @@ import addserviceRouter from "./routes/addservice.route";
 import cancelserviceRouter from "./routes/cancelservice.route";
 import barra_lateralRouter from "./routes/barra_lateral.route";
 import quienes_somosRouter from "./routes/Quienes_somos.route";
-import getHabRouter from "./routes/inserthab.route";
-import verFormRouter from "./routes/verForm.route";
+import verHabRouter from "./routes/inserthab.route";
+import fileRouter from "./routes/file.route";
+
 //inicializaciones
 const app:Application = express();
 
@@ -30,7 +31,7 @@ app.use(express.static(path.join(__dirname,'./public')))
 
 
 //Routes
-app.use('/inicio',indexRouter);
+app.use('/',indexRouter);
 app.use('/quienes-somos',quienes_somosRouter);
 app.use('/habitaciones',habitacionRouter);
 app.use('/reservaciones', reservacionesRouter);
@@ -38,6 +39,8 @@ app.use('/detalle-cuenta',detalleCuentaRouter);
 app.use('/addservice',addserviceRouter);
 app.use('/cancelservice',cancelserviceRouter);
 app.use('/barra_lateral',barra_lateralRouter);
-app.use('/regresa/habitacion',getHabRouter);
-app.use('/edita',verFormRouter);
+
+app.use('/catalogo/habitacion',verHabRouter);
+app.use('/file',fileRouter);
 export default app;
+

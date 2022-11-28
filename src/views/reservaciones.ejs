@@ -1,69 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <script src="/assets/js/formatoDate.js"></script>
     <%- include("comunes/componentes/headers-components")-%>
-    <link rel="stylesheet" href="assets/css/reservaciones.css"/>
-    <title>
-        Nuestras Reservaciones
-    </title>
-</head>
-<body class="background-reservation">
-    <div class="container-title">
-        <h1 class="title-reservations">Reservaciones</h1>
+    <link rel="stylesheet" href="assets/css/reservaciones.css" />
+    <title>Nuestras Reservaciones</title>
+  </head>
+  <body class="background-reservation">
+    <header><%-include ("comunes/componentes/barra_lateral") -%></header>
+    <div class="contenedor-titulo">
+      <h1 class="titulo-reservacion">Reservaciones</h1>
     </div>
 
-<section class="reservation-container">
-    <div class="reservation-container-grid">
-        <div class="reservation-target center-element">
+    <section class="contenedor-reservacion">
+      <div class="grid-contenedor-reservacion">
+        <% reservaciones.forEach((reservacion)=>{%>
+        <div class="tarjeta-reservacion centrar-elemento">
+          <div class="imagen-tarjeta-reservacion">
+            <img
+              alt="habitacion del hotel"
+              class="foto-de-habitacion"
+              src="assets/img/hab1.jpg"
+            />
+          </div>
+          <div class="contenedor-info-reservacion">
+            <h2 class="nombre-reservacion">
+              RS-<%= reservacion.idReservacion%>
+            </h2>
             <div>
-        <p class="name-reservation">RS1</p>
-        <p class="name-client">Nombre del cliente</p>
-    </div>
-    </div>
-
-    <div class="reservation-target center-element">
-        <div>
-        <p class="name-reservation">RS1</p>
-        <p class="name-client">Nombre del cliente</p>
-    </div>
-    </div>
-
-    <div class="reservation-target center-element">
-        <div>
-        <p class="name-reservation">RS1</p>
-        <p class="name-client">Nombre del cliente</p>
-    </div>
-    </div>
-
-    <div class="reservation-target center-element">
-        <div>
-        <p class="name-reservation">RS1</p>
-        <p class="name-client">Nombre del cliente</p>
-    </div>
-    </div>
-
-
-    <div class="reservation-target center-element">
-        <div>
-        <p class="name-reservation">RS1</p>
-        <p class="name-client">Nombre del cliente</p>
-    </div>
-    </div>
-
-    <div class="reservation-target center-element">
-        <div>
-        <p class="name-reservation">RS1</p>
-        <p class="name-client">Nombre del cliente</p>
-    </div>
-    </div>
-
-    <div class="reservation-target center-element">
-       <div>
-        <p class="name-reservation">RS1</p>
-        <p class="name-client">Nombre del cliente</p>
-    </div>
-    </div>
-    </div>
-</section>
-</body>
+              <p class="nombre-cliente"><%= reservacion.cliente.nombre%></p>
+              <p class="nombre-habitacion">
+                Habitación <%= reservacion.habitacion.descripcion%>
+              </p>
+            </div>
+            <div class="contenedor-fechas">
+              <p class="nombre-fechas">
+                <%= formatoFecha(reservacion.fechainicio)%> - <%= formatoFecha(reservacion.fechafin)%>
+              </p>
+            </div>
+          </div>
+        </div>
+        <% })%>
+      </div>
+    </section>
+  </body>
+  
 </html>

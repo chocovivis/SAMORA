@@ -3,19 +3,19 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    return queryInterface.bulkInsert("Empleado", [
+    return queryInterface.bulkInsert("empleado", [
       {
-        id_empleado: 1,
+        idEmpleado: 1,
         nombre: "Doe",
         puesto: "Gerente",
       },
       {
-        id_empleado: 2,
+        idEmpleado: 2,
         nombre: "Luis",
         puesto: "Barman",
       },
       {
-        id_empleado: 3,
+        idEmpleado: 3,
         nombre: "Yajil",
         puesto: "Recepcion",
       },
@@ -23,6 +23,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.bulkDelete('Empleado',null,{});
+    return queryInterface.bulkDelete('empleado',null,{});
   },
 };

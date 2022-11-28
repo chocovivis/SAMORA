@@ -1,6 +1,6 @@
 const habitacion = (() => {
     const $bodyTable = document.getElementById("data");
-    const BASE_URL = "catalogo/habitacion";
+    const BASE_URL = "/catalogo/habitacion";
     const $containerTable = document.getElementById("containerTable");
   
     const _getData = async () => {

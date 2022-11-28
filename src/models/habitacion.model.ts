@@ -1,7 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/database.config";
 import HabitacionType from "../types/habitacion.type";
-import ReservacionType from "../types/reservacion.type";
 
 
 export class HabitacionModel extends Model<HabitacionType> {}
@@ -31,7 +30,7 @@ HabitacionModel.init(
         allowNull: false,
     },
     url_imagen:{
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(100),
       allowNull: true,
     }
   },

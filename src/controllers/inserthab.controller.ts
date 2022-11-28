@@ -19,8 +19,8 @@ export async function createHabitacion(req: Request, res: Response) {
   try {
     const { body, file } = req;
     body["url_imagen"] = file?.path;
-    const habResponse = await HabitacionModel.create(body, { raw: true });
-    res.status(201).json(habResponse);
+    const HabitacionResponse = await HabitacionModel.create(body, { raw: true });
+    res.status(201).json(HabitacionResponse);
   } catch (error) {
     console.log(error);
   }

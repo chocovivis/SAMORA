@@ -1,85 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="assets/css/habitaciones.css">
-
+  <head>
+    <link rel="stylesheet" href="assets/css/habitaciones.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Spectral:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Nuestras habitaciones</title>
-</head>
-<body class="fondo-hab elementos-dispos">
-
-    <header>
-
-        <%-include ("comunes/componentes/barra_lateral") -%>
-
-    </header>
-
-    <div class="espacio-titles espacio-entre">
-        <label class="color-secundary subtitulo-style">Conoce nuestras habitaciones</label>
-        <label class="color-secundary titulo-style">SAMORA</label>
+  </head>
+  <body class="fondo-hab elementos-dispos">
+    <header><%-include ("comunes/componentes/barra_lateral") -%></header>
+    <div class="contenedor-titulo">
+      <h1 class="titulo-habitacion">Conoce nuestras habitaciones</h1>
     </div>
 
-    <div class="espacio-titles">
-        <div class="hab-altura">
-            <div class="div-hab menu-font-style espacio-titles Space-Element">
-                <img class="icon-hab-style" src="assets/img/hab1.jpg"> 
-                <span class="div-datos">
-                    <label class="data-font-style color-primary">Nombre</label> 
-                    <p class="btn-font-style color-primary">Descripción de la habitacion</p>
-                    <button class="color-secundary boton-reservacion btn-font-style">Disponible para reservar</button>
-                </span>
-             </div>
-        
-             <div class="div-hab menu-font-style espacio-titles Space-Element">
-                <img class="icon-hab-style" src="assets/img/hab2.jpg"> 
-                <span class="div-datos">
-                    <label class="data-font-style color-primary">Nombre</label> 
-                    <p class="btn-font-style color-primary">Descripción de la habitacion</p>
-                    <button class="color-secundary boton-reservacion btn-font-style">Disponible para reservar</button>
-                </span>
+    <div class="espacio-titles contenedor-grid">
+      <div class="tarjetas-de-habitaciones">
+        <% habitaciones.forEach((habitacion)=>{%>
+        <div class="tarjeta-habitacion">
+          <div class="imagen-tarjeta">
+            <img class="icon-hab-style" src="assets/img/hab1.jpg" />
+          </div>
+          <div class="tarjeta-info">
+            <div class="div-datos">
+              <label class="data-font-style uppercase">
+                <%= habitacion.descripcion%>
+              </label>
+              <p class="btn-font-style descripcion-habitacion">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, sapiente!
+              </p>
+              <button class="boton-reservacion">
+                Disponible para reservar
+              </button>
             </div>
-    
-            <div class="div-hab menu-font-style espacio-titles Space-Element">
-                <img class="icon-hab-style" src="assets/img/hab3.jpg"> 
-                <span class="div-datos">
-                    <label class="data-font-style color-primary">Nombre</label> 
-                    <p class="btn-font-style color-primary">Descripción de la habitacion</p>
-                    <button class="color-secundary boton-reservacion btn-font-style">NO disponible</button>
-                </span>
-            </div>
+          </div>
         </div>
-
-    <div class="hab-altura">
-        
-        <div class="div-hab menu-font-style espacio-titles Space-Element">
-            <img class="icon-hab-style" src="assets/img/hab3.jpg"> 
-            <span class="div-datos">
-                <label class="data-font-style color-primary">Nombre</label> 
-                <p class="btn-font-style color-primary">Descripción de la habitacion</p>
-                <button class="color-secundary boton-reservacion btn-font-style">Disponible para reservar</button>
-            </span>
-        </div>
-    
-        <div class="div-hab menu-font-style espacio-titles Space-Element">
-            <img class="icon-hab-style" src="assets/img/hab1.jpg"> 
-            <span class="div-datos">
-                <label class="data-font-style color-primary">Nombre</label> 
-                <p class="btn-font-style color-primary">Descripción de la habitacion</p>
-                <button class="color-secundary boton-reservacion btn-font-style">Disponible para reservar</button>
-            </span>
-        </div>
-    
-        <div class="div-hab menu-font-style espacio-titles Space-Element">
-            <img class="icon-hab-style" src="assets/img/hab2.jpg"> 
-            <span class="div-datos">
-                <label class="data-font-style color-primary">Nombre</label> 
-                <p class="btn-font-style color-primary">Descripción de la habitacion</p>
-                <button class="color-secundary boton-reservacion btn-font-style">Disponible para reservar</button>
-            </span>
-        </div>
-
-     </div>
-
+        <% })%>
+      </div>
     </div>
-   
-</body>
+  </body>
 </html>

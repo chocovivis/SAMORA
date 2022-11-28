@@ -14,7 +14,8 @@ import barra_lateralRouter from "./routes/barra_lateral.route";
 import quienes_somosRouter from "./routes/Quienes_somos.route";
 import verHabRouter from "./routes/inserthab.route";
 import fileRouter from "./routes/file.route";
-import adminRouter from "./routes/admin.route";
+import pagosRouter from "./routes/pagos.route";
+
 
 //inicializaciones
 const app:Application = express();
@@ -40,7 +41,7 @@ app.use('/detalle-cuenta',detalleCuentaRouter);
 app.use('/addservice',addserviceRouter);
 app.use('/cancelservice',cancelserviceRouter);
 app.use('/barra_lateral',barra_lateralRouter);
-
+app.use('/pago',pagosRouter)
 app.use('/catalogo/habitacion',verHabRouter);
 app.use('/file',fileRouter);
 

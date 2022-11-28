@@ -4,39 +4,39 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     return [
-      queryInterface.addColumn("Reservacion", "id_cliente", {
-        type: Sequelize.DataTypes.INTEGER,
-        references: {
-          model: "Cliente",
-          key: "id_cliente",
-        },
-        onDelete:'SET NULL'
-      }),
-      queryInterface.addColumn("Reservacion", "num_habitacion", {
-        type: Sequelize.DataTypes.INTEGER,
-        references: {
-          model: "Habitacion",
-          key: "num_habitacion",
-        },
-        onDelete:'SET NULL'
-      }),
-      queryInterface.addColumn("Habitacion", "id_empleado", {
-        type: Sequelize.DataTypes.INTEGER,
-        references: {
-          model: "Empleado",
-          key: "id_empleado",
-        },
-        onDelete:'SET NULL'
-      }),
+      //queryInterface.addColumn("reservacion", "idCliente", {
+        //type: Sequelize.DataTypes.INTEGER,
+        //references: {
+         // model: "cliente",
+        // key: "idCliente",
+        //},
+        //onDelete:'SET NULL'
+     // }),
+      //queryInterface.addColumn("reservacion", "numHabitacion", {
+          // type: Sequelize.DataTypes.INTEGER,
+          // references: {
+        //     model: "habitacion",
+        //     key: "numHabitacion",
+        //   },
+        //   onDelete:'SET NULL'
+        // }),
+      // queryInterface.addColumn("habitacion", "idEmpleado", {
+      //   type: Sequelize.DataTypes.INTEGER,
+      //   references: {
+      //     model: "empleado",
+      //     key: "idEmpleado",
+      //   },
+      //   onDelete:'SET NULL'
+      // }),
       
     ];
   },
 
   async down(queryInterface, Sequelize) {
     return[
-      queryInterface.removeColumn('Reservacion', 'id_cliente'),
-      queryInterface.removeColumn('Reservacion', 'num_habitacion'),
-      queryInterface.removeColumn('Habitacion', 'id_empleado'),
+      queryInterface.removeColumn('reservacion', 'idCliente'),
+      queryInterface.removeColumn('reservacion', 'numHabitacion'),
+      queryInterface.removeColumn('habitacion', 'idEmpleado'),
     ]
   },
 };

@@ -2,26 +2,41 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    return queryInterface.createTable('Reservacion', {
-      id_reservacion: {
+  async up(queryInterface, Sequelize) {
+    return queryInterface.createTable('reservacion', {
+      idReservacion: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
-        autoIncrement:true
+        autoIncrement: true
       },
-      fechainicio: {
-          type: Sequelize.DataTypes.DATE,
-          allowNull:false
+      fechaInicio: {
+        type: Sequelize.DataTypes.DATEONLY,
+        allowNull: false
       },
-      fechafin:{
-          type: Sequelize.DataTypes.DATE,
-          allowNull:false
+      fechaFin: {
+        type: Sequelize.DataTypes.DATEONLY,
+        allowNull: false
+      },
+      estado: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
+        defaultValue: "PENDIENTE",
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('NOW()')
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('NOW()')
       }
     })
   },
 
-  async down (queryInterface, Sequelize) {
-    return queryInterface.dropTable('Reservacion');
+  async down(queryInterface, Sequelize) {
+    return queryInterface.dropTable('reservacion');
   }
 };

@@ -3,9 +3,9 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return queryInterface.createTable('Cliente', {
+    return queryInterface.createTable('cliente', {
       
-      id_cliente: {
+      idCliente: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
@@ -16,11 +16,11 @@ module.exports = {
         allowNull: false,
       },
       apellido: {
-        type: Sequelize.DataTypes.STRING(10),
+        type: Sequelize.DataTypes.STRING(20),
         allowNull: false,
       },
       email:{
-          type:Sequelize.DataTypes.STRING(12),
+          type:Sequelize.DataTypes.STRING(30),
           allowNull:false,
       },
       direccion:{
@@ -30,11 +30,21 @@ module.exports = {
       telefono:{
           type:Sequelize.DataTypes.STRING(12),
           allowNull:false,
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('NOW()')
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('NOW()')
       }
     });
   },
 
   async down (queryInterface, Sequelize) {
-    return queryInterface.dropTable('Cliente');
+    return queryInterface.dropTable('cliente');
   }
 };

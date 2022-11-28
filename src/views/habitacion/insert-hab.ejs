@@ -6,8 +6,9 @@
 </head>
 
 <body>
+    <%- include("../habitacion/components/barra-hab") -%>
         <main>
-            <h4>Habitaciones</h4>
+            <h4 class="my-basic">Habitaciones</h4>
             
                 <%- include("../habitacion/components/form-component") -%>
                 <%- include("../habitacion/components/table-component") -%>
@@ -19,6 +20,7 @@
         <%- include("../comunes/componentes/footer-components") -%>
     <script src="/assets/js/habitacion/form-habitacion.js"></script>
     <script src="/assets/js/habitacion/habitacion.js"></script>
+
 </body>
 
 </html>

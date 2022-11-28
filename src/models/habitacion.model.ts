@@ -29,10 +29,6 @@ HabitacionModel.init(
         type: DataTypes.BOOLEAN,
         allowNull: false,
     },
-    url_imagen:{
-      type: DataTypes.STRING(100),
-      allowNull: true,
-    }
   },
   {
     sequelize,

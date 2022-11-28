@@ -8,7 +8,7 @@ export function verHabitacion(req: Request, res: Response) {
 export async function readHabitacion(req: Request, res: Response) {
   const {query:where} = req
   const habitaciones = await HabitacionModel.findAll({
-    attributes: ["numHabitacion", "precio", "capacidad", "descripcion", "estado","url_imagen"],
+    attributes: ["numHabitacion", "precio", "capacidad", "descripcion", "estado"],
     raw: true,
     where
   });

@@ -1,0 +1,44 @@
+header,
+main,
+footer {
+    padding-left: 300px;
+}
+.fondoini{
+    background-image: url(../img/pool.jpg);
+    background-size:cover;
+
+}
+.fondohab{
+    background-color:#fffbf0;
+}
+.paddingtitle{
+    padding-left: 800px;
+    padding-top: 550px;
+    
+}
+
+@media only screen and (max-width : 992px) {
+
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+.mx-basic{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.my-basic{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+body{
+    background-color: #f5f8fa;
+}
+
+.img-icon{
+    height: 100px;
+    width: 120px;
+}

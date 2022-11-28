@@ -135,6 +135,7 @@
 		font-size: 15px;
 		margin-right: 5px;
 		font-family: pptelegraf;
+		background-color: transparent;
 	}
 
 	.container .menu a:hover{
@@ -148,6 +149,7 @@
 	#btn-menu{
 		display: none;
 	}
+
 
 	.container-menu{
 		position: absolute;

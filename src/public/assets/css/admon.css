@@ -9,12 +9,17 @@ footer {
 
 }
 .fondohab{
+    background-color: #1f1f1f;
+}
+.fondo-edit{
+    background-color: #135c7d;
+}
+.fondo-edit2{
     background-color:#fffbf0;
 }
 .paddingtitle{
-    padding-left: 800px;
+    padding-left: 830px;
     padding-top: 550px;
-    
 }
 
 @media only screen and (max-width : 992px) {
@@ -34,11 +39,7 @@ footer {
     margin-left: 10px;
     margin-right: 10px;
 }
+
 body{
     background-color: #f5f8fa;
-}
-
-.img-icon{
-    height: 100px;
-    width: 120px;
 }

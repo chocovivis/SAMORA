@@ -45,7 +45,7 @@ const habitacion = (() => {
     const _createBtnAction = (itemId = 0, labelBtn = "", _actionFuntion = () => {}) => {
       const $btn = document.createElement("button");
       $btn.innerText = labelBtn;
-      $btn.className += "waves-effect waves-light btn red";
+      $btn.className += "waves-effect waves-light btn my-basic mx-basic fondo-edit little-font-style";
       $btn.setAttribute("item-id", itemId);
       $btn.addEventListener("click", _actionFuntion);
       return $btn;

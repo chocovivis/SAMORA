@@ -3,5 +3,5 @@ export default interface ReservacionType {
     fechaInicio?: Date;
     fechaFin?: Date;
     estado?: string;
-    idCliente?: number;
+    //idCliente?: number;
   }

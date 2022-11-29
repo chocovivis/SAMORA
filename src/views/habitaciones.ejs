@@ -19,6 +19,7 @@
     <div class="espacio-titles contenedor-grid">
       <div class="tarjetas-de-habitaciones">
         <% habitaciones.forEach((habitacion)=>{%>
+       
         <div class="tarjeta-habitacion">
           <div class="imagen-tarjeta">
             <img class="icon-hab-style" src="assets/img/hab1.jpg" />
@@ -26,14 +27,13 @@
           <div class="tarjeta-info">
             <div class="div-datos">
               <label class="data-font-style uppercase">
-                <%= habitacion.descripcion%>
+                Habitacion número <%= habitacion.numHabitacion%>
               </label>
               <p class="btn-font-style descripcion-habitacion">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, sapiente!
+                <%= habitacion.descripcion%>
               </p>
-              <button class="boton-reservacion">
-                Disponible para reservar
+              <button id=<%=habitacion.numHabitacion%> class="boton-reservacion">
+                <%= habitacion.estado %>
               </button>
             </div>
           </div>
@@ -42,4 +42,5 @@
       </div>
     </div>
   </body>
+  <script src="/assets/js/pagos/pagos.js"></script>
 </html>

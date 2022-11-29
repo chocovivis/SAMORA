@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/pagos.css">
     <title>Métodos de pago</title>
+
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         </label>
     </div>
 
-    <form class="tamanoForm">
+    <form class="tamanoForm" id="formTarjeta">
         <!-- Div de métodos de pago -->
 
         <div class="centrarFormulario redondearBordes tamanoFormulario">
@@ -44,6 +45,12 @@
                     <div class="izqDerDatos">
 
                         <div class="datosTarjeta">
+
+                            <div class="espacios">
+                                <label>
+                                    Monto a pagar
+                                </label>
+                            </div>
 
                             <div class="espacios">
                                 <label>
@@ -68,16 +75,23 @@
                         <div class="datosTarjetaCentro">
                             <div class="alinearColumnas">
                                 <div class="espacios">
-                                    <input type="text" class="cuadrosTexto">
+                                    <label id="lblMonto">$</label>
                                 </div>
                                 <div class="espacios">
-                                    <input type="text" class="cuadrosTexto">
+                                    <input type="text" name="numeros" class="cuadrosTexto" id="numeroTarjeta"
+                                        onkeypress="return solonumeros(event)" onpaste="return false" minlength="16"
+                                        maxlength="16" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+                                </div>
+                                <div class="espacios">
+                                    <input type="text" name="letras" class="cuadrosTexto" id="nombreTarjeta"
+                                        onkeypress="return soloLetras(event)" onpaste="return false" maxlength="40"
+                                        placeholder="Nombre(s) y apellido(s)" required>
                                 </div>
 
                                 <div class="alinearFilas">
 
                                     <div class="espacios">
-                                        <select name="mes">
+                                        <select name="mes" id="mesSelected">
                                             <option value="mes1" selected>01</option>
                                             <option value="mes2">02</option>
                                             <option value="mes2">03</option>
@@ -94,7 +108,7 @@
                                     </div>
 
                                     <div class="espacios">
-                                        <select name="anio">
+                                        <select name="anio" id="anioSelected">
                                             <option value="anio1" selected>2022</option>
                                             <option value="anio">2023</option>
                                             <option value="anio">2024</option>
@@ -147,21 +161,23 @@
 
                 <div class="alinearFilas botonesDerecha colorArribaAbajo">
                     <div>
-                        <button type="button" class="botonCancelar margenBotones">
+                        <button type="button" class="botonCancelar margenBotones" id="btnCancelar">
                             Cancelar
                         </button>
                     </div>
                     <div>
-                        <button type="button" class="botonAgregar margenBotones">
+                        <button type="button" class="botonAgregar margenBotones" id="btnAgregar">
                             Agregar tarjeta
                         </button>
                     </div>
                 </div>
-
             </div>
         </div>
     </form>
 
 </body>
+
+<script src="/assets/js/pago/form-tarjeta.js"></script>
+<script src="/assets/js/pago/pagoScripts.js"></script>
 
 </html>

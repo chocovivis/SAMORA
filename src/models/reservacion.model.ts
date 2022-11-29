@@ -26,6 +26,8 @@ ReservacionModel.init(
       type: DataTypes.STRING(15),
       allowNull: false,
     },
+
+    
   },
   {
     sequelize,
@@ -35,10 +37,10 @@ ReservacionModel.init(
 // HabitacionModel.belongsToMany(ClienteModel, { through: ReservacionModel });
 // ClienteModel.belongsToMany(HabitacionModel, { through: ReservacionModel });
 
-// ReservacionModel.belongsTo(ClienteModel,{
-//   foreignKey: "idCliente",
-//   as: "cliente",
-// });
+ReservacionModel.belongsTo(ClienteModel,{
+   foreignKey: "idCliente",
+   as: "cliente",
+ });
 ClienteModel.hasMany(ReservacionModel);
 ReservacionModel.belongsTo(HabitacionModel, {
  foreignKey: "numHabitacion",

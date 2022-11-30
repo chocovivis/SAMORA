@@ -1,45 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include("comunes/componentes/headers-components")-%>
-    <link rel="stylesheet" href="assets/css/detalle_cuenta.css"/>
-    
-    <title>
-    </title>
-</head>
-<body class="background-reservation">
-    <script>
-        </script>
-    <div class="reservation-container">
-        <div class="table-container">
-            <div class="padding">
-            <p class="title-font">RSV-01</p>
-            <p >Nombre del cliente</p> 
-            </div>
+  <head>
+    <%- include("comunes/componentes/herder-special") -%>
+    <link rel="stylesheet" href="assets/css/detalle_cuenta.css" />
+  </head>
+  <body class="fondo-edit">
+    <%- include("detalle_cuenta/components/barra_hab") -%>
+    <main>
+      <h4 class="my-basic color-secundary menu-font-style">
+       Detalle de Cuenta
+      </h4>
 
-            <table class="align">
-               
-                <tbody class="body-container">
-                    
-                    <% services.forEach((s)=>{%>
-                        <tr class="">
-                            <th><%= s.service  %></th>
-                            <th> <%= s.price %></th>
-                        </tr>
-                    <% })%>
-                
-            </tbody>
-            </table>
-            <div class="padding total">
-                <p >Total</p>
-                <p > 000.000</p> 
-            </div>
-        </div>
-    </div>
-    <div class="align-buttons">
-        <button id="btnAddSer" class="button-style" >Agregar Servicio</button>
-        <button id="btnCanSer" class="button-style">Cancelar Servicio</button>
-    </div>
-</body>
+      <%- include("detalle_cuenta/components/form-component") -%> 
+      <%- include("detalle_cuenta/components/table-component") -%>
 
+      <!--img width="100" height="100" src="/api/v1/file?filePath= " alt="" srcset=""-->
+    </main>
+    <%- include("comunes/componentes/footer-components") -%>
+    <script src="/assets/js/detalle_cuenta/form-detalle-cuenta.js"></script>
+    <script src="/assets/js/detalle_cuenta/detalle-cuenta.js"></script>
+
+
+  </body>
 </html>

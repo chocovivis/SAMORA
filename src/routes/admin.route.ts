@@ -1,8 +1,10 @@
 import {Router} from "express";
 import { adminResponse } from "../controllers/admin.controller";
 
-const adminRouter: Router = Router();
+import { createLogginMiddleware } from "../middlewares/loggin.middleware";
 
-adminRouter.get("/", adminResponse);
+const adminRouter: Router = Router();
+const protegerRutaFuncion = createLogginMiddleware(["*"]);
+adminRouter.get("/",protegerRutaFuncion, adminResponse);
 
 export default adminRouter;

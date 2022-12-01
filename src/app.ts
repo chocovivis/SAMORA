@@ -2,6 +2,7 @@ import express, { Application } from "express";
 import path from 'path';
 import morgan from "morgan";
 import dotenv from "dotenv";
+
 dotenv.config();
 //Importando rutas
 import indexRouter from './routes/index.route';
@@ -16,9 +17,11 @@ import verHabRouter from "./routes/inserthab.route";
 import fileRouter from "./routes/file.route";
 import pagosRouter from "./routes/pagos.route";
 import adminRouter from "./routes/admin.route";
+import servicioRouter from "./routes/servicios.route";
 import usuarioRouter from "./routes/usuario.route";
 import logginRouter from "./routes/loggin.route";
 import { sessionConfig } from "./middlewares/express-session.middleware";
+
 
 //inicializaciones
 const app:Application = express();
@@ -49,6 +52,13 @@ app.use('/pago',pagosRouter)
 app.use('/catalogo/habitacion',verHabRouter);
 app.use('/file',fileRouter);
 app.use('/admon',adminRouter);
+
+app.use('/servicios',servicioRouter);
+
+export default app;
+
+
 app.use('/usuario', usuarioRouter);
 app.use('/loggin', logginRouter);
 export default app;
+

@@ -1,8 +1,11 @@
-import { Router } from "express";
-import { serviciosResponse } from "../controllers/servicios.controller";
+import {Router} from "express";
+import { servicioResponse } from "../controllers/servicio.controller";
 
-const serviciosRouter: Router = Router();
 
-serviciosRouter.get("/",serviciosResponse);
+const servicioRouter: Router = Router();
 
-export default serviciosRouter;
+servicioRouter.get("/", servicioResponse);
+
+export default servicioRouter;
+
+

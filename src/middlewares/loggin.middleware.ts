@@ -13,6 +13,7 @@ export function createLogginMiddleware(rolUser:string[]){
             return res.redirect("/loggin/signin");
         }
         //
+
         if( !(rolUser.includes(req.session.user.rol as string) || rolUser.includes("*"))){
             return res.redirect("/unauthorized");
         }
@@ -21,3 +22,8 @@ export function createLogginMiddleware(rolUser:string[]){
     }
 
 }
+
+/**
+ * 1111 empleado
+ * 2222 cliente
+ */

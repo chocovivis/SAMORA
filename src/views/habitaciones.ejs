@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="assets/css/habitaciones.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Spectral:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <title>Nuestras habitaciones</title>
-  </head>
-  <body class="fondo-hab elementos-dispos">
-    <header><%-include ("comunes/componentes/barra_lateral") -%></header>
-    <div class="contenedor-titulo">
-      <h1 class="titulo-habitacion">Conoce nuestras habitaciones</h1>
-    </div>
 
-    <div class="espacio-titles contenedor-grid">
-      <div class="tarjetas-de-habitaciones">
-        <% habitaciones.forEach((habitacion)=>{%>
-       
+<head>
+  <link rel="stylesheet" href="assets/css/habitaciones.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Spectral:wght@300&display=swap"
+    rel="stylesheet" />
+  <title>Nuestras habitaciones</title>
+</head>
+
+<body class="fondo-hab elementos-dispos">
+  <header>
+    <%-include ("comunes/componentes/barra_lateral") -%>
+  </header>
+  <div class="contenedor-titulo">
+    <h1 class="titulo-habitacion">Conoce nuestras habitaciones</h1>
+  </div>
+
+  <div class="espacio-titles contenedor-grid">
+    <div class="tarjetas-de-habitaciones">
+
+      <!-- For que genera las habitaciones -->
+
+      <% habitaciones.forEach((habitacion)=>{%>
+
         <div class="tarjeta-habitacion">
           <div class="imagen-tarjeta">
             <img class="icon-hab-style" src="assets/img/hab1.jpg" />
@@ -32,6 +38,9 @@
               <p class="btn-font-style descripcion-habitacion">
                 <%= habitacion.descripcion%>
               </p>
+              <p id=<%=habitacion.numHabitacion%> class="btn-font-style descripcion-habitacion">
+                $<%= habitacion.precio%>.00
+              </p>
               <button id=<%=habitacion.numHabitacion%> class="boton-reservacion">
                 <%= habitacion.estado %>
               </button>
@@ -39,8 +48,9 @@
           </div>
         </div>
         <% })%>
-      </div>
     </div>
-  </body>
-  <script src="/assets/js/pagos/pagos.js"></script>
+  </div>
+</body>
+<script src="/assets/js/pagos/pagos.js"></script>
+
 </html>

@@ -59,8 +59,13 @@ body {
     padding: 5px;
 }
 
-.cuadrosTexto{
+.cuadroNumTarjeta{
     width: 220px;
+}
+
+.cuadroNombre{
+    width: 220px;
+    text-transform: uppercase;
 }
 
 .izqDerDatos {
@@ -118,6 +123,7 @@ body {
     width: 70px;
     height: 30px;
     padding: 2px;
+    cursor: pointer;
 }
 
 .botonAgregar {
@@ -126,6 +132,7 @@ body {
     width: 100px;
     padding: 2px;
     height: 30px;
+    cursor: pointer;
 }
 
 .margenBotones {

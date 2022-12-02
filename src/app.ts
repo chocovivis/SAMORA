@@ -17,10 +17,14 @@ import verHabRouter from "./routes/inserthab.route";
 import fileRouter from "./routes/file.route";
 import pagosRouter from "./routes/pagos.route";
 import adminRouter from "./routes/admin.route";
+
+import serviciosRouter from "./routes/servicios.route";
+
 import servicioRouter from "./routes/servicios.route";
 import usuarioRouter from "./routes/usuario.route";
 import logginRouter from "./routes/loggin.route";
 import { sessionConfig } from "./middlewares/express-session.middleware";
+
 
 
 //inicializaciones
@@ -52,10 +56,10 @@ app.use('/pago',pagosRouter)
 app.use('/catalogo/habitacion',verHabRouter);
 app.use('/file',fileRouter);
 app.use('/admon',adminRouter);
+
 app.use('/servicios',servicioRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/loggin', logginRouter);
-
 
 
 export default app;

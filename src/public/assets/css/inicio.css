@@ -53,6 +53,7 @@
 .botones-altura {
     display: flex;
     flex-direction: column;
+    height: 600px;
     justify-content: center;
     align-items: center;
     align-content: center;

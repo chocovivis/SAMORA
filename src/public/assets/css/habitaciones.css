@@ -54,6 +54,7 @@
   color: white;
   border-radius: 5px;
   font-family: pptelegraf;
+  cursor: pointer;
 }
 
 .div-datos {

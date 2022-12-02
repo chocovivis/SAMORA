@@ -34,8 +34,8 @@ ReservacionModel.init(
     tableName: "reservacion",
   }
 );
-// HabitacionModel.belongsToMany(ClienteModel, { through: ReservacionModel });
-// ClienteModel.belongsToMany(HabitacionModel, { through: ReservacionModel });
+//HabitacionModel.belongsToMany(ClienteModel, { through: ReservacionModel });
+//ClienteModel.belongsToMany(HabitacionModel, { through: ReservacionModel });
 
 ReservacionModel.belongsTo(ClienteModel,{
    foreignKey: "idCliente",

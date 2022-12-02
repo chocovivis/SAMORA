@@ -44,11 +44,12 @@ app.use('/reservaciones', reservacionesRouter);
 app.use('/detalle-cuenta',detalleCuentaRouter);
 app.use('/addservice',addserviceRouter);
 app.use('/cancelservice',cancelserviceRouter);
-//app.use('/barra_lateral',barra_lateralRouter);
+app.use('/barra_lateral',barra_lateralRouter);
 app.use('/pago',pagosRouter)
 app.use('/catalogo/habitacion',verHabRouter);
 app.use('/file',fileRouter);
 app.use('/admon',adminRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/loggin', logginRouter);
+
 export default app;

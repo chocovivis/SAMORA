@@ -11,6 +11,9 @@ module.exports = {
         "estado": "PENDIENTE",
         "idCliente": 4,
         "numHabitacion": 6
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         "idReservacion": 2,
         "fechaInicio": "2022-11-03",
@@ -18,6 +21,9 @@ module.exports = {
         "estado": "PENDIENTE",
         "idCliente": 9,
         "numHabitacion": 3
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         "idReservacion": 3,
         "fechaInicio": "2022-12-12",
@@ -25,6 +31,9 @@ module.exports = {
         "estado": "PENDIENTE",
         "idCliente": 2,
         "numHabitacion": 5
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         "idReservacion": 4,
         "fechaInicio": "2022-11-19",
@@ -32,6 +41,9 @@ module.exports = {
         "estado": "PENDIENTE",
         "idCliente": 10,
         "numHabitacion": 3
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         "idReservacion": 5,
         "fechaInicio": "2022-12-21",
@@ -39,6 +51,9 @@ module.exports = {
         "estado": "PENDIENTE",
         "idCliente": 4,
         "numHabitacion": 5
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         "idReservacion": 6,
@@ -47,6 +62,9 @@ module.exports = {
         "estado": "PENDIENTE",
         "idCliente": 7,
         "numHabitacion": 1
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         "idReservacion": 7,
@@ -55,6 +73,9 @@ module.exports = {
         "estado": "PENDIENTE",
         "idCliente": 12,
         "numHabitacion": 1
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         "idReservacion": 8,
@@ -63,6 +84,9 @@ module.exports = {
         "idCliente": 4,
         "estado": "FINALIZADO",
         "numHabitacion": 2
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         "idReservacion": 9,
@@ -71,6 +95,9 @@ module.exports = {
         "idCliente": 7,
         "estado": "FINALIZADO",
         "numHabitacion": 1
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         "idReservacion": 10,
@@ -79,6 +106,9 @@ module.exports = {
         "idCliente": 3,
         "estado": "FINALIZADO",
         "numHabitacion": 4
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         "idReservacion": 11,
@@ -87,6 +117,9 @@ module.exports = {
         "idCliente": 8,
         "estado": "CANCELADO",
         "numHabitacion": 4
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         "idReservacion": 12,
@@ -95,13 +128,15 @@ module.exports = {
         "idCliente": 5,
         "estado": "CANCELADO",
         "numHabitacion": 2
-      }
-
-    ]
-      , {});
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }]
+    );
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.bulkDelete('reservacion', null, {});
+    return queryInterface.bulkDelete('reservacion', null, {
+    });
   }
 };

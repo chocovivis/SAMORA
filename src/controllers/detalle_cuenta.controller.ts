@@ -1,34 +1,24 @@
 import { Request, Response } from "express";
+import { DetalleCuentaModel } from "../models/detalle_cuenta.model";
+import { ServicioModel } from "../models/servicio.model";
 
-export function detalle_cuentaResponse(req: Request, res: Response) {
-  const data = { title: "detalle-cuentas" };
-  let services=[
-    {
-        id:1,
-        service:"taxi",
-        price:70
-    },
-    {
-        id:2,
-        service:"massage",
-        price:70
-    },
-    {
-        id:3,
-        service:"restaurant",
-        price:70
-    },
-    {
-        id:4,
-        service:"bar",
-        price:70
-    },
-    {
-        id:5,
-        service:"taxi",
-        price:70
-    },
-]
+export async function detalleCuentaReservacionResponse(
+  req: Request,
+  res: Response
+) {
+  const idReservacion = req.params.idReservacion;
+  let servicios = await ServicioModel.findAll();
+  let detallesCuenta = await DetalleCuentaModel.findOne({
+    include: { all: true },
+    where: { idReservacion: idReservacion },
+  });
+  await detallesCuenta?.update({servicios})
+  // detallesCuenta!.setAttributes("servicios", servicios);
+  // await detallesCuenta!.save({ fields: ["servicios"] });
 
-  return res.render("detalle_cuenta", {services});
+  console.log("Todos los detalles cuenta:", JSON.stringify(detallesCuenta));
+  return res.send(detallesCuenta);
+  // res.status(200).json(detallesCuenta);
+
+  return res.render("detalle_cuenta", { detallesCuenta });
 }

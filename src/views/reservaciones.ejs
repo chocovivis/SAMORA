@@ -16,12 +16,17 @@
       <div class="grid-contenedor-reservacion">
         <% reservaciones.forEach((reservacion)=>{%>
         <div class="tarjeta-reservacion centrar-elemento">
-          <div class="imagen-tarjeta-reservacion">
-            <img
-              alt="habitacion del hotel"
-              class="foto-de-habitacion"
-              src="assets/img/hab1.jpg"
-            />
+          <div>
+            <div class="imagen-tarjeta-reservacion">
+              <img
+                alt="habitacion del hotel"
+                class="foto-de-habitacion"
+                src="assets/img/hab1.jpg"
+              />
+            </div>
+            <div>
+              <a href="/detalle-cuenta/<%=reservacion.idReservacion%>">Agregar Servicios</a>
+            </div>
           </div>
           <div class="contenedor-info-reservacion">
             <h2 class="nombre-reservacion">
@@ -35,7 +40,8 @@
             </div>
             <div class="contenedor-fechas">
               <p class="nombre-fechas">
-                <%= formatoFecha(reservacion.fechaInicio)%> - <%= formatoFecha(reservacion.fechaFin)%>
+                <%= formatoFecha(reservacion.fechaInicio)%> - <%=
+                formatoFecha(reservacion.fechaFin)%>
               </p>
             </div>
           </div>
@@ -44,5 +50,4 @@
       </div>
     </section>
   </body>
-  
 </html>

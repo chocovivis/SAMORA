@@ -22,7 +22,6 @@ import usuarioRouter from "./routes/usuario.route";
 import logginRouter from "./routes/loggin.route";
 import { sessionConfig } from "./middlewares/express-session.middleware";
 
-
 //inicializaciones
 const app:Application = express();
 
@@ -38,7 +37,6 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'./public')))
 app.use(sessionConfig);
 
-
 //Routes
 app.use('/',indexRouter);
 app.use('/quienes-somos',quienes_somosRouter);
@@ -52,12 +50,7 @@ app.use('/pago',pagosRouter)
 app.use('/catalogo/habitacion',verHabRouter);
 app.use('/file',fileRouter);
 app.use('/admon',adminRouter);
-
 app.use('/servicios',servicioRouter);
-
-export default app;
-
-
 app.use('/usuario', usuarioRouter);
 app.use('/loggin', logginRouter);
 export default app;

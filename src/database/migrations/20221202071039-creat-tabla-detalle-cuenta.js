@@ -3,20 +3,29 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    return queryInterface.createTable('sesion', {
-      idSesion: {
+    return queryInterface.createTable('detalle_cuenta', {
+      idDetalleCuenta: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
       },
-      idUsuario: {
+      idReservacion: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
+        references:{
+          model:'reservacion',
+          key: 'idReservacion',
+        }
       },
-      fecha_cierre: {
-        type: Sequelize.DataTypes.DATE,
-        defaultValue: Sequelize.literal('NOW()')
+      totalFinal: {
+        type: Sequelize.DataTypes.DOUBLE,
+        allowNull: false,
+        defaultValue: 0,
+      },
+      estado: {
+        type: Sequelize.DataTypes.BOOLEAN,
+        defaultValue: true,
       },
       createdAt: {
         allowNull: true,
@@ -32,6 +41,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.dropTable('sesion');
+    return queryInterface.dropTable('detalle_cuenta');
   }
 };

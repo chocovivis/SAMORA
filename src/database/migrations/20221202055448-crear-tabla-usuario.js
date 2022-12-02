@@ -3,7 +3,8 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    return queryInterface.createTable('usuario', {
+    return queryInterface.createTable('usuario', 
+    {
       idUsuario: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,

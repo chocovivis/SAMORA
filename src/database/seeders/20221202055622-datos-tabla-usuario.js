@@ -8,16 +8,26 @@ module.exports = {
      *
      * Example:
      */
-    await queryInterface.bulkInsert('usuario', [
-      // {
-      //   idUsuario: 1,
-      //   idEmpleado: 1,
-      //   correo: "admin@samora.com",
-      //   contrasenia: "adminSamora@1",
-      //   estatus: 'A',
-      //   rol: "2222",
-      // }
-    ])
+    await queryInterface.bulkInsert('detalle_cuenta', [
+      {
+        idDetalleCuenta: 1,
+        idReservacion: 1,
+        totalFinal: 150,
+        estado: true,
+      },
+      {
+        idDetalleCuenta: 2,
+        idReservacion: 2,
+        totalFinal: 200,
+        estado: true,
+      },
+      {
+        idDetalleCuenta: 3,
+        idReservacion: 3,
+        totalFinal: 180,
+        estado: true,
+      }
+    ], {});
   },
 
   async down(queryInterface, Sequelize) {
@@ -25,7 +35,7 @@ module.exports = {
      * Add commands to revert seed here.
      *
      * Example:
-     * await queryInterface.bulkDelete('People', null, {});
      */
+    await queryInterface.bulkDelete('detalle_cuenta', null, {});
   }
 };

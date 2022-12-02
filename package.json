@@ -11,7 +11,11 @@
     "build": "tsc",
     "clean": "rimraf dist",
     "start": "npm run build && node dist/src/index.js",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "db:up": "sequelize db:migrate && sequelize db:seed:all",
+    "db:undo": "sequelize db:seed:undo:all && sequelize db:migrate:undo:all ",
+    "db:start": "sequelize db:create && npm run db:up",
+    "db:restart": "sequelize db:drop && npm run db:start && npm run dev"
   },
   "keywords": [],
   "author": "AdrianHernandezIslas",

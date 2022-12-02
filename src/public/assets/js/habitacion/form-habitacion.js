@@ -3,19 +3,19 @@ const formHab = (() => {
     const $form = document.getElementById("formHab");
     
     const BASE_URL = "/catalogo/habitacion";
-    //
+  
     const _setData = (item = {}, typeRender = "POST") => {
       const $inputPrecio = document.getElementById("precio");
       const $inputCapacidad = document.getElementById("capacidad");
       const $inputDescripcion = document.getElementById("descripcion");
       const $inputEstado = document.getElementById("estado");
-      //const $inputImagen = document.getElementById("imagen");
+      
       const { numHabitacion,precio,capacidad,descripcion,estado } = item;
       $inputPrecio.value = precio;
       $inputCapacidad.value=capacidad;
       $inputDescripcion.value = descripcion;
       $inputEstado.value = estado;
-      //$inputImagen.value = imagen;
+      
       $form.setAttribute("method", typeRender);
       $form.setAttribute("item-id", numHabitacion);
       M.updateTextFields();

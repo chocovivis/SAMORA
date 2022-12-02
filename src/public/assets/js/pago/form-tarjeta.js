@@ -29,7 +29,7 @@ const $formTarjeta = (() => {
 
                 if ($mesVigencia > $mesActual) {
 
-                    // console.log("Tarjeta aceptable");
+                    window.alert("Reservación realizada");
 
                 } else if ($mesVigencia == $mesActual) {
 
@@ -38,7 +38,7 @@ const $formTarjeta = (() => {
                         window.alert("Tarjeta inválida");
                     } else {
 
-                        // console.log("Tarjeta aceptable");
+                        window.alert("Reservación realizada");
 
                     }
                 } else if ($mesVigencia < $mesActual) {
@@ -48,7 +48,7 @@ const $formTarjeta = (() => {
                 }
             } else {
 
-                // console.log("Tarjeta aceptable");
+                window.alert("Reservación realizada");
 
             }
 

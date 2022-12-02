@@ -1,0 +1,37 @@
+header,
+main,
+footer {
+    padding-left: 300px;
+}
+.fondo-login{
+    background-image: url(../img/rest.jpg);
+    background-size:cover;
+
+}
+.fondolog{
+    background-color: #1f1f1f;
+}
+
+.camposform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 400px;
+    padding-right: 20px;
+}
+.buttonpos{
+    padding-left: 250px;
+}
+.maindispos{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-style{
+    padding-top: 20px;
+    border-radius: 5px;
+    height: 60px;
+}
+

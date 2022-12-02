@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("../login/componentes/header-login.ejs") -%>
+</head>
+
+<body class="fondo-login">
+    <%- include("../login/componentes/barra-log.ejs")-%>
+    <main>
+        <div class="row">
+            <form class="col s12" method="post" action="/loggin">
+              <div class="row camposform">
+                
+                <div class="input-field col s6 fondolog input-style">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="correo" name="correo" type="text" class="validate white-text">
+                  <label for="correo">Correo</label>
+                </div>
+                <div class="input-field col s6 fondolog input-style">
+                  <i class="material-icons prefix">grain</i>
+                  <input id="contrasenia" name="contrasenia" type="password" class="validate white-text">
+                  <label for="contrasenia">Contraseña</label>
+                </div>
+                <div class="buttonpos">
+                    <button class="btn fondolog " type="submit" name="action">Entrar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+
+              </div>
+             
+            </form>
+            <% if(error==1){ %>
+              <span>Credenciales incorrectas</span>
+            <% } %>
+          </div>
+    </main>
+  <%- include("../comunes/componentes/footer-components.ejs") -%>
+</body>
+
+</html>

@@ -23,7 +23,7 @@ width: 80%;
 margin: auto;
 background-color: rgb(229, 221, 209);
 padding: 1.5rem 0.5rem 2.5rem 0.5rem;
-
+margin-top: 4rem;
 }
 .total{
     display: flex;

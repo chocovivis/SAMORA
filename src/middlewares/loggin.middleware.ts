@@ -10,9 +10,10 @@ export function createLogginMiddleware(rolUser:string[]){
     return (req: Request, res: Response, next: NextFunction) => {
     
         if (!req.session.user) {
-            return res.redirect("/api/v1/loggin/signin");
+            return res.redirect("/loggin/signin");
         }
         //
+
         if( !(rolUser.includes(req.session.user.rol as string) || rolUser.includes("*"))){
             return res.redirect("/unauthorized");
         }
@@ -21,3 +22,8 @@ export function createLogginMiddleware(rolUser:string[]){
     }
 
 }
+
+/**
+ * 1111 empleado
+ * 2222 cliente
+ */

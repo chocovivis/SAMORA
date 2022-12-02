@@ -28,14 +28,14 @@
               RS-<%= reservacion.idReservacion%>
             </h2>
             <div>
-              <p class="nombre-cliente"><%= reservacion.cliente.nombre%></p>
+              <p class="nombre-cliente"><%= reservacion?.cliente?.nombre%></p>
               <p class="nombre-habitacion">
-                Habitación <%= reservacion.habitacion.descripcion%>
+                Habitación <%= reservacion?.habitacion?.descripcion%>
               </p>
             </div>
             <div class="contenedor-fechas">
               <p class="nombre-fechas">
-                <%= formatoFecha(reservacion.fechainicio)%> - <%= formatoFecha(reservacion.fechafin)%>
+                <%= formatoFecha(reservacion.fechaInicio)%> - <%= formatoFecha(reservacion.fechaFin)%>
               </p>
             </div>
           </div>

@@ -24,12 +24,12 @@ module.exports = {
         defaultValue: "PENDIENTE",
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('NOW()')
       },
       updatedAt: {
-        allowNull: false,
+        allowNull:true,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('NOW()')
       }

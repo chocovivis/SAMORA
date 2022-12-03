@@ -10,3 +10,13 @@ export async function readCliente(req: Request, res: Response) {
   });
   res.status(200).json(empleados);
 }
+export async function createCliente(req: Request, res: Response) {
+  try {
+    const { body } = req;
+    //body["url_imagen"] = file?.path;
+    const ClienteResponse = await ClienteModel.create(body, { raw: true });
+    res.status(201).json(ClienteResponse);
+  } catch (error) {
+    console.log(error);
+  }
+}

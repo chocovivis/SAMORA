@@ -26,6 +26,10 @@ ReservacionModel.init(
       type: DataTypes.STRING(15),
       allowNull: false,
     },
+    idCliente:{
+      type: DataTypes.NUMBER,
+      allowNull:false,
+    },
 
     
   },
@@ -34,16 +38,16 @@ ReservacionModel.init(
     tableName: "reservacion",
   }
 );
-// HabitacionModel.belongsToMany(ClienteModel, { through: ReservacionModel });
-// ClienteModel.belongsToMany(HabitacionModel, { through: ReservacionModel });
+//HabitacionModel.belongsToMany(ClienteModel, { through: ReservacionModel });
+//ClienteModel.belongsToMany(HabitacionModel, { through: ReservacionModel });
 
 ReservacionModel.belongsTo(ClienteModel,{
    foreignKey: "idCliente",
    as: "cliente",
  });
-ClienteModel.hasMany(ReservacionModel);
+//ClienteModel.hasMany(ReservacionModel);
 ReservacionModel.belongsTo(HabitacionModel, {
  foreignKey: "numHabitacion",
  as: "habitacion",
 });
-HabitacionModel.hasMany(ReservacionModel);
+//HabitacionModel.hasMany(ReservacionModel);

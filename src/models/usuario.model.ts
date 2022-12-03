@@ -39,7 +39,7 @@ UsuarioModel.init(
     rol: {
       type: DataTypes.STRING(4),
       allowNull: false,
-      defaultValue: "1111",
+      defaultValue: "2222",
     },
     token_restauracion: {
       type: DataTypes.STRING(100),

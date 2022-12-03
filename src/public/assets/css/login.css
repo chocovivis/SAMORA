@@ -1,0 +1,59 @@
+html {
+    height: 100%;
+}
+
+form {
+    height: 100%;
+}
+
+main {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.fondo-login {
+    background-image: url(../img/res.jpg);
+    background-size: cover;
+}
+
+.fondolog {
+    background-color: #1f1f1f;
+}
+
+.camposform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+
+.maindispos {
+    display: flex;
+    flex-direction: column;
+}
+
+.span-padding {
+    color: #fffbf0;
+}
+
+.credenciales{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.col {
+    height: 100%;
+}
+
+.s12 {
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}

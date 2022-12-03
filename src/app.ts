@@ -52,4 +52,5 @@ app.use('/admon',adminRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/loggin', logginRouter);
 
+
 export default app;

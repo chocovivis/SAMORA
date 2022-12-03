@@ -40,7 +40,7 @@ function soloLetras(e) {
 
     teclado = String.fromCharCode(key).toUpperCase();
 
-    letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ ";
+    letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ ";
 
     especiales = "8-37-38-46-164";
 

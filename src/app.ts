@@ -16,7 +16,8 @@ import verHabRouter from "./routes/inserthab.route";
 import fileRouter from "./routes/file.route";
 import pagosRouter from "./routes/pagos.route";
 import adminRouter from "./routes/admin.route";
-import serviciosRouter from "./routes/servicios.route";
+import serviciosRouter from "./routes/registro.route";
+import registroRouter from "./routes/registro.route";
 
 //inicializaciones
 const app:Application = express();
@@ -46,7 +47,7 @@ app.use('/pago',pagosRouter)
 app.use('/catalogo/habitacion',verHabRouter);
 app.use('/file',fileRouter);
 app.use('/admon',adminRouter);
-app.use('/servicios',serviciosRouter);
+app.use('/registro',registroRouter);
 
 export default app;
 

@@ -14,7 +14,7 @@ export function createLogginMiddleware(rolUser:string[]){
         }
         //
         if( !(rolUser.includes(req.session.user.rol as string) || rolUser.includes("*"))){
-            return res.redirect("/unauthorized");
+            return res.redirect("/admon/unauthorized");
         }
 
         next();

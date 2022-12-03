@@ -34,4 +34,9 @@ footer {
     border-radius: 5px;
     height: 60px;
 }
+.span-padding{
+    padding-left: 800px;
+    padding-bottom: 200px;
+    color:#fffbf0;
+}
 

@@ -41,7 +41,6 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'./public')))
 app.use(sessionConfig);
 
-
 //Routes
 app.use('/',indexRouter);
 app.use('/quienes-somos',quienes_somosRouter);

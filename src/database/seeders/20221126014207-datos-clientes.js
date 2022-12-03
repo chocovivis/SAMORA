@@ -12,6 +12,9 @@ module.exports = {
         "direccion": "795 Arizona Terrace",
         "telefono": "8811135807",
         "apellido": "Valentin Wansbury"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 2,
         "nombre": "Yessica",
@@ -19,6 +22,9 @@ module.exports = {
         "direccion": "00729 Londonderry Hill",
         "telefono": "6967631301",
         "apellido": "Nicolea Clowsley"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 3,
         "nombre": "Alexis",
@@ -26,6 +32,9 @@ module.exports = {
         "direccion": "830 Stang Point",
         "telefono": "3623330896",
         "apellido": "Tabatha Rostron"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 4,
         "nombre": "José",
@@ -33,6 +42,9 @@ module.exports = {
         "direccion": "285 Hanover Place",
         "telefono": "6276967137",
         "apellido": "Roberto Jillis"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 5,
         "nombre": "Fernando",
@@ -40,6 +52,9 @@ module.exports = {
         "direccion": "6793 Kipling Hill",
         "telefono": "5803554424",
         "apellido": "Raviv Satterly"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 6,
         "nombre": "Monse",
@@ -47,6 +62,9 @@ module.exports = {
         "direccion": "2669 Nancy Pass",
         "telefono": "7501158802",
         "apellido": "Arlen Sutlieff"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 7,
         "nombre": "Clara",
@@ -54,6 +72,9 @@ module.exports = {
         "direccion": "32294 Schurz Pass",
         "telefono": "3511843685",
         "apellido": "Sansone McGrane"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 8,
         "nombre": "Anderson",
@@ -61,6 +82,9 @@ module.exports = {
         "direccion": "42 Superior Park",
         "telefono": "1669972693",
         "apellido": "Brucie McGeneay"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 9,
         "nombre": "Mauricio",
@@ -68,6 +92,9 @@ module.exports = {
         "direccion": "070 Blue Bill Park Alley",
         "telefono": "1692372689",
         "apellido": "Nara Korbmaker"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 10,
         "nombre": "Rodolfo",
@@ -75,6 +102,9 @@ module.exports = {
         "direccion": "43 Corscot Street",
         "telefono": "1827162701",
         "apellido": "Ruby Okenfold"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 11,
         "nombre": "Mónica",
@@ -82,6 +112,9 @@ module.exports = {
         "direccion": "20702 8th Pass",
         "telefono": "7022336568",
         "apellido": "Marlene Thickins"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 12,
         "nombre": "Margaret",
@@ -89,6 +122,9 @@ module.exports = {
         "direccion": "43785 Fordem Road",
         "telefono": "5736338252",
         "apellido": "Garrard Keepin"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 13,
         "nombre": "Cesar",
@@ -96,6 +132,9 @@ module.exports = {
         "direccion": "7 Jana Crossing",
         "telefono": "6687419186",
         "apellido": "Chevy Christensen"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 14,
         "nombre": "Deunicio",
@@ -103,6 +142,9 @@ module.exports = {
         "direccion": "98384 Bultman Point",
         "telefono": "3213502151",
         "apellido": "Sianna Sherwyn"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 15,
         "nombre": "Efernic",
@@ -110,6 +152,9 @@ module.exports = {
         "direccion": "5 Dryden Road",
         "telefono": "8895436028",
         "apellido": "Charisse Brister"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 16,
         "nombre": "Fabiola",
@@ -117,6 +162,9 @@ module.exports = {
         "direccion": "19 Kensington Hill",
         "telefono": "7122422723",
         "apellido": "Cornelle Brine"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 17,
         "nombre": "Guillermo",
@@ -124,6 +172,9 @@ module.exports = {
         "direccion": "971 Del Mar Street",
         "telefono": "1428474791",
         "apellido": "Raphaela Ransley"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 18,
         "nombre": "Harem",
@@ -131,6 +182,9 @@ module.exports = {
         "direccion": "24 Melody Place",
         "telefono": "3361032734",
         "apellido": "Ezri Leare"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 19,
         "nombre": "Jacinto",
@@ -138,6 +192,9 @@ module.exports = {
         "direccion": "61550 Arkansas Lane",
         "telefono": "1449360378",
         "apellido": "Garold Langeley"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 20,
         "nombre": "Karmen",
@@ -145,6 +202,9 @@ module.exports = {
         "direccion": "276 Calypso Trail",
         "telefono": "5258698063",
         "apellido": "Ricky Furse"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 21,
         "nombre": "Zaira",
@@ -152,6 +212,9 @@ module.exports = {
         "direccion": "02 Banding Drive",
         "telefono": "9468929197",
         "apellido": "Cathie Venney"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 22,
         "nombre": "Brisa",
@@ -159,6 +222,9 @@ module.exports = {
         "direccion": "54 Fremont Road",
         "telefono": "6788670044",
         "apellido": "Aldwin Aitchison"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }, {
         idCliente: 23,
         "nombre": "Karolina",
@@ -166,11 +232,15 @@ module.exports = {
         "direccion": "20036 Stoughton Road",
         "telefono": "6845632738",
         "apellido": "Ruthie Gratrex"
+        ,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }]
     );
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.bulkDelete('cliente', null, {});
+    return queryInterface.bulkDelete('cliente', null, {
+    });
   }
 };

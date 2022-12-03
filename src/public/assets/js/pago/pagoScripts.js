@@ -1,4 +1,12 @@
-function solonumeros(e) {
+var $botones = document.getElementsByTagName('button');
+var $parrafos = document.getElementsByTagName('p');
+var $monto = document.getElementById('lblMonto');
+var $idBoton;
+var $precioHabitacion;
+
+//Validar los datos ingresados: 16 dígitos en la tarjeta
+
+function soloNumeros(e) {
 
     key = e.keyCode || e.wich;
 
@@ -24,13 +32,15 @@ function solonumeros(e) {
 
 }
 
+//Validar los datos ingresados: sólo letras en el nombrede la tarjeta
+
 function soloLetras(e) {
 
     key = e.keyCode || e.wich;
 
     teclado = String.fromCharCode(key).toUpperCase();
 
-    letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ ";
+    letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ ";
 
     especiales = "8-37-38-46-164";
 

@@ -18,7 +18,7 @@
 
     </header>
 
-    <div>
+    <div class="letreroPago">
         <label class="titulo">
             OPCIONES DE PAGO
         </label>
@@ -48,12 +48,6 @@
 
                             <div class="espacios">
                                 <label>
-                                    Monto a pagar
-                                </label>
-                            </div>
-
-                            <div class="espacios">
-                                <label>
                                     Número de tarjeta
                                 </label>
                             </div>
@@ -75,61 +69,43 @@
                         <div class="datosTarjetaCentro">
                             <div class="alinearColumnas">
                                 <div class="espacios">
-                                    <label id="lblMonto">$</label>
-                                </div>
-                                <div class="espacios">
-                                    <input type="text" name="numeros" class="cuadrosTexto" id="numeroTarjeta"
-                                        onkeypress="return solonumeros(event)" onpaste="return false" minlength="16"
+                                    <input type="text" name="numeros" class="cuadroNumTarjeta" id="numeroTarjeta"
+                                        onkeypress="return soloNumeros(event)" onpaste="return false" minlength="16"
                                         maxlength="16" placeholder="xxxx-xxxx-xxxx-xxxx" required>
                                 </div>
                                 <div class="espacios">
-                                    <input type="text" name="letras" class="cuadrosTexto" id="nombreTarjeta"
+                                    <input type="text" name="letras" class="cuadroNombre" id="nombreTarjeta"
                                         onkeypress="return soloLetras(event)" onpaste="return false" maxlength="40"
-                                        placeholder="Nombre(s) y apellido(s)" required>
+                                        required>
                                 </div>
 
                                 <div class="alinearFilas">
 
                                     <div class="espacios">
-                                        <select name="mes" id="mesSelected">
-                                            <option value="mes1" selected>01</option>
-                                            <option value="mes2">02</option>
-                                            <option value="mes2">03</option>
-                                            <option value="mes2">04</option>
-                                            <option value="mes2">05</option>
-                                            <option value="mes2">06</option>
-                                            <option value="mes2">07</option>
-                                            <option value="mes2">08</option>
-                                            <option value="mes2">09</option>
-                                            <option value="mes2">10</option>
-                                            <option value="mes2">11</option>
-                                            <option value="mes2">12</option>
+                                        <select name="mes" id="mesSelected" required>
+                                            <option value="1" selected>01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
                                         </select>
                                     </div>
 
                                     <div class="espacios">
-                                        <select name="anio" id="anioSelected">
-                                            <option value="anio1" selected>2022</option>
-                                            <option value="anio">2023</option>
-                                            <option value="anio">2024</option>
-                                            <option value="anio">2025</option>
-                                            <option value="anio">2026</option>
-                                            <option value="anio">2027</option>
-                                            <option value="anio">2028</option>
-                                            <option value="anio">2029</option>
-                                            <option value="anio">2030</option>
-                                            <option value="anio">2031</option>
-                                            <option value="anio">2032</option>
-                                            <option value="anio">2033</option>
-                                            <option value="anio">2034</option>
-                                            <option value="anio">2035</option>
-                                            <option value="anio">2036</option>
-                                            <option value="anio">2037</option>
-                                            <option value="anio">2038</option>
-                                            <option value="anio">2039</option>
-                                            <option value="anio">2040</option>
-                                            <option value="anio">2041</option>
-                                            <option value="anio">2042</option>
+                                        <select name="anio" id="anioSelected" required>
+                                            <option value="2022" selected>2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
                                         </select>
                                     </div>
                                 </div>
@@ -179,5 +155,6 @@
 
 <script src="/assets/js/pago/form-tarjeta.js"></script>
 <script src="/assets/js/pago/pagoScripts.js"></script>
+<script src="/assets/js/pagos/pagos.js"></script>
 
 </html>

@@ -10,7 +10,9 @@ module.exports = {
         capacidad: 5,
         descripcion: "frente al mar",
         estado: true,
-        idEmpleado: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+        // idEmpleado: 2,
       },
       {
         numHabitacion: 2,
@@ -18,7 +20,9 @@ module.exports = {
         capacidad: 2,
         descripcion: "principal",
         estado: true,
-        idEmpleado: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+        // idEmpleado: 3,
       },
       {
         numHabitacion: 3,
@@ -26,7 +30,9 @@ module.exports = {
         capacidad: 1,
         descripcion: "clásica",
         estado: true,
-       idEmpleado: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+        //  idEmpleado: 3,
       },
       {
         numHabitacion: 4,
@@ -34,7 +40,9 @@ module.exports = {
         capacidad: 2,
         descripcion: "estudio",
         estado: true,
-        idEmpleado: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+        // idEmpleado: 1,
       },
       {
         numHabitacion: 5,
@@ -42,7 +50,9 @@ module.exports = {
         capacidad: 2,
         descripcion: "master",
         estado: true,
-        idEmpleado: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+        // idEmpleado: 2,
       },
       {
         numHabitacion: 6,
@@ -50,7 +60,9 @@ module.exports = {
         capacidad: 4,
         descripcion: "doble",
         estado: true,
-        idEmpleado: 3,
+        createdAt: new Date(),
+        updatedAt: new Date()
+        // idEmpleado: 3,
       },
 
     ]);

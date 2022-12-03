@@ -1,42 +1,59 @@
-header,
-main,
-footer {
-    padding-left: 300px;
+html {
+    height: 100%;
 }
-.fondo-login{
-    background-image: url(../img/rest.jpg);
-    background-size:cover;
 
+form {
+    height: 100%;
 }
-.fondolog{
+
+main {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.fondo-login {
+    background-image: url(../img/res.jpg);
+    background-size: cover;
+}
+
+.fondolog {
     background-color: #1f1f1f;
 }
 
-.camposform{
+.camposform {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 400px;
-    padding-right: 20px;
+    height: 100%;
 }
-.buttonpos{
-    padding-left: 250px;
-}
-.maindispos{
+
+.maindispos {
     display: flex;
     flex-direction: column;
 }
 
-.input-style{
-    padding-top: 20px;
-    border-radius: 5px;
-    height: 60px;
-}
-.span-padding{
-    padding-left: 800px;
-    padding-bottom: 200px;
-    color:#fffbf0;
+.span-padding {
+    color: #fffbf0;
 }
 
+.credenciales{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.col {
+    height: 100%;
+}
+
+.s12 {
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}

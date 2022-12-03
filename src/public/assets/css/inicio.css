@@ -1,12 +1,15 @@
 .fondo-inicio {
     background-image: url(../img/playa-inicio.jpg);
     background-attachment: fixed;
+    height: 100%;
 }
 
-.espacio-titles {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
 }
 
 .boton-res-style {
@@ -26,11 +29,6 @@
     font-size: 30px;
 }
 
-.boton-sn-style {
-    background-color: transparent;
-    border-color: transparent;
-}
-
 .icon-menu-style {
     width: 40px;
     height: 40px;
@@ -38,21 +36,10 @@
     align-items: baseline;
 }
 
-.icon-flecha-style {
-    padding: 7;
-    width: 35px;
-    height: 40px;
-}
-
-.div-menu {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-}
-
 .botones-altura {
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -61,12 +48,4 @@
 .elementos-dispos {
     display: flex;
     flex-direction: column;
-}
-
-.div-info-style {
-    background-color: #135c7d;
-    flex: 1;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
 }

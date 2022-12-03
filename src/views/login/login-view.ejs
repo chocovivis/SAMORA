@@ -5,38 +5,40 @@
   <%- include("../login/componentes/header-login.ejs") -%>
 </head>
 
-<body class="fondo-login">
-    <%- include("../login/componentes/barra-log.ejs")-%>
-    <main>
-        <div class="row">
-            <form class="col s12" method="post" action="/loggin">
-              <div class="row camposform">
-                
-                <div class="input-field col s6 input-style">
-                  <i class="material-icons prefix">account_circle</i>
-                  <input id="correo" name="correo" type="text" class="validate white-text">
-                  <label for="correo">Correo</label>
-                </div>
-                <div class="input-field col s6  input-style">
-                  <i class="material-icons prefix">grain</i>
-                  <input id="contrasenia" name="contrasenia" type="password" class="validate white-text">
-                  <label for="contrasenia">Contraseña</label>
-                </div>
-                <div class="buttonpos">
-                    <button class="btn fondolog " type="submit" name="action">Entrar
-                      <i class="material-icons right">send</i>
-                    </button>
-                  </div>
+<body class="">
+  <%- include("../login/componentes/barra-log.ejs")-%>
+    <main class="fondo-login">
+      <div class="row">
+        <form class="todoAlto" method="post" action="/loggin">
+          <div class="camposform">
 
-              </div>
-             
-            </form>
-            <% if(error==1){ %>
-              <span class="span-padding">Credenciales incorrectas</span>
-            <% } %>
+            <div class="input-field">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="correo" name="correo" type="text" class="validate white-text">
+              <label for="correo">Usuario</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">grain</i>
+              <input id="contrasenia" name="contrasenia" type="password" class="validate white-text">
+              <label for="contrasenia">Contraseña</label>
+            </div>
+            <div>
+              <button class="btn fondolog " type="submit" name="action">Entrar
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+            <div class="credenciales">
+              <% if(error==1){ %>
+                <span class="span-padding">Credenciales incorrectas</span>
+                <% } %>
+            </div>
+
           </div>
+
+        </form>
+      </div>
     </main>
-  <%- include("../comunes/componentes/footer-components.ejs") -%>
+    <%- include("../comunes/componentes/footer-components.ejs") -%>
 </body>
 
 </html>

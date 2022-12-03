@@ -1,6 +1,7 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/database.config";
 import { HabitacionModel } from "./habitacion.model";
+import { UsuarioModel } from "./usuario.model";
 import EmpleadoType from "../types/empleado.type";
 
 export class EmpleadoModel extends Model<EmpleadoType> {}
@@ -12,6 +13,10 @@ EmpleadoModel.init(
       primaryKey: true,
       allowNull: false,
       autoIncrement:true
+    },
+    idUsuario:{
+      type: DataTypes.INTEGER,
+      allowNull:false
     },
     nombre: {
       type: DataTypes.STRING(60),

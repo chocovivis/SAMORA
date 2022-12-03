@@ -22,7 +22,9 @@ import serviciosRouter from "./routes/servicios.route";
 import servicioRouter from "./routes/servicios.route";
 import usuarioRouter from "./routes/usuario.route";
 import logginRouter from "./routes/loggin.route";
-import { sessionConfig } from "./middlewares/express-session.middleware";
+import { sessionConfig ,sessionMiddleware } from "./middlewares/express-session.middleware";
+import empleadoRouter from "./routes/empleado.route";
+import clienteRouter from "./routes/cliente.route";
 
 
 
@@ -41,6 +43,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'./public')))
 app.use(sessionConfig);
 
+app.use(sessionMiddleware);
+
+
 //Routes
 app.use('/',indexRouter);
 app.use('/quienes-somos',quienes_somosRouter);
@@ -58,4 +63,10 @@ app.use('/registro',registroRouter);
 app.use('/servicios',servicioRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/loggin', logginRouter);
+
+app.use('/empleado',empleadoRouter);
+app.use('/cliente',clienteRouter);
+
+
+
 export default app;

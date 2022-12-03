@@ -4,8 +4,8 @@ export function validaRutasEmpleado (req: Request, res: Response, next:NextFunct
     if(!req.session.user){
         return res.redirect("/login/signin");
     }
-    if(req.session.user.rol !== "2222"){
-        return res.redirect("/unauthorized");
+    if(req.session.user.rol !== "1111"){
+        return res.redirect("/admon/unauthorized");
     }
     next();
 }

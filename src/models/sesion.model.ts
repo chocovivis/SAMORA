@@ -1,7 +1,7 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/database.config";
 import SesionType from "../types/sesion.type"; 
-import { UsuarioModel } from "./usuario.model";
+
 
 export class SesionModel extends Model<SesionType> {}
 
@@ -27,8 +27,3 @@ SesionModel.init(
     tableName: "sesion",
   }
 );
-
-/* SesionModel.hasMany(UsuarioModel, {
-  foreignKey: "idUsuario",
-  sourceKey:"idUsuario"
-}); */

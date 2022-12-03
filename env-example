@@ -1,0 +1,25 @@
+# development || test || production
+NODE_ENV=
+
+#development-render
+DB_PORT=
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
+DB_HOST=
+
+#test
+TEST_DB_USER=
+TEST_DB_PASSWORD=
+TEST_DB_NAME=
+TEST_DB_HOST=
+
+#prod-render
+PROD_DB_PORT=
+PROD_DB_USER=
+PROD_DB_PASSWORD=
+PROD_DB_NAME=
+PROD_DB_HOST=
+PROD_DB_PORT=
+
+

@@ -37,7 +37,7 @@ export async function logginUsuario(req: Request, res: Response) {
 
     return res.redirect("/loggin/signin?error=1");
   } catch (error) {
-    res.send("error");
+    res.send("error")
   }
 }
 

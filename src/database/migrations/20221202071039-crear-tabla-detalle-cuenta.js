@@ -9,6 +9,7 @@ module.exports = {
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
+        unique: true,
       },
       idReservacion: {
         type: Sequelize.DataTypes.INTEGER,

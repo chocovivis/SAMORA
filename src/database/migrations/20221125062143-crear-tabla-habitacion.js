@@ -8,7 +8,8 @@ module.exports = {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
-        autoIncrement:true
+        autoIncrement:true,
+        unique: true,
       },
       precio: {
         type: Sequelize.DataTypes.DOUBLE,

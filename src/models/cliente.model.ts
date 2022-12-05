@@ -14,6 +14,7 @@ ClienteModel.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
+      unique: true,
       autoIncrement: true,
     },
     idUsuario:{

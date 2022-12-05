@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { isAdmin } from "../libraries/review.library";
 import { ReservacionModel } from "../models/reservacion.model";
 import ReservacionType from "../types/reservacion.type";
 
@@ -6,7 +7,7 @@ export async function reservacionesResponse(req: Request, res: Response) {
   const reservaciones = await ReservacionModel.findAll({ include: { all: true }  });
  // console.table( JSON.stringify(reservaciones));
   //return res.send(reservaciones);
-  return res.render("reservaciones", { reservaciones, formatoFecha: formatoFecha });
+  return res.render("reservaciones", {isAdmin: isAdmin(req), reservaciones, formatoFecha: formatoFecha });
 }
 
 export const actualizarReservacion = async (

@@ -14,11 +14,12 @@
     <header>
         <%-include ("comunes/componentes/barra_lateral",{isAdmin}) -%>
     </header>
+    <%if (!isAuth) {%>
     <span class="botones-altura">
         <a href="/loggin/signin" class="boton-ini-style color-primary label-font-style">Inicia sesión</a>
         <a href="/registro" class="boton-res-style color-secundary label-font-style">Registrate</a>
     </span>
-
+    <%}%>
 </body>
 
 </html>

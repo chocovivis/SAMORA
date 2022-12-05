@@ -14,7 +14,7 @@ export async function logginUsuario(req: Request, res: Response) {
     const { body } = req;
     const { correo, contrasenia } = body;
     const usuarioResponse = await UsuarioModel.findOne({
-      attributes: ["idUsuario", "idEmpleado","idCliente", "correo", "estatus", "rol", "contrasenia"],
+      attributes: ["idUsuario", "correo", "contrasenia","estatus", "rol" ],
       where: { correo }
     });
   
@@ -32,7 +32,7 @@ export async function logginUsuario(req: Request, res: Response) {
 
     res.redirect("/loggin/signin?error=1");
   } catch (error) {
-    res.send("error");
+    res.send("error")
   }
 }
 

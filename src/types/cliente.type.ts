@@ -3,7 +3,7 @@ export default interface ClienteType {
     idUsuario?:number;
     nombre?: string;
     apellido?: string;
-    email?:string;
     direccion?: String;
     telefono?: String;
   }
+//cambió este modelo ojo

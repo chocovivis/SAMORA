@@ -1,77 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/registro.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/registro.css" />
     <title>Registro</title>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-
         <%-include ("comunes/componentes/barra_lateral2") -%>
-
     </header>
 
-    <form class="todoAlto">
-
-        <div class="columnaBlancaAzul">
-
-            <div class="divBlanco">
-
-                <div class="blancoLetrero">
-
-                    <label class="fuenteTitulo">
-
-                        DATOS DE REGISTRO
-
-                    </label>
-
-                </div>
-
-                <div class="blancoImagen centrarImgLobby">
-
-                    <img src="assets/img/playa-inicio.jpg" class="imgLobby">
-
-                </div>
-
-            </div>
-
-            <div class="divAzul">
-
-                <input type="text" name="nombre" class="cuadrosDatos" id="numeroTarjeta"
-                    onkeypress="return soloLetras(event)" onpaste="return false" placeholder="Nombre:" required>
-
-                <input type="text" name="apellidos" class="cuadrosDatos" id="apellidos"
-                    onkeypress="return soloLetras(event)" onpaste="return false" placeholder="Apellidos:" required>
-
-                <input type="text" name="email" class="cuadrosDatos" id="email" placeholder="e-mail:" required>
-
-                <input type="text" name="direccion" class="cuadrosDatos" id="direccion" placeholder="Dirección:"
-                    required>
-
-                <input type="text" name="telefono" class="cuadrosDatos" id="telefono"
-                    onkeypress="return soloNumeros(event)" onpaste="return false" maxlength="10" placeholder="Teléfono:"
-                    required>
-
-                <input type="password" name="contraseña" class="cuadrosDatos" id="contraseña" placeholder="Contraseña:"
-                    required>
-
-                <button class="btnRegistro">Registrarse</button>
-
-            </div>
-
+    <div class="todoAlto">
+      <div class="columnaBlancaAzul">
+        <div class="divBlanco">
+          <div class="blancoLetrero">
+            <label class="fuenteTitulo"> DATOS DE REGISTRO </label>
+          </div>
+          <div class="blancoImagen centrarImgLobby">
+            <img src="assets/img/playa-inicio.jpg" class="imgLobby" />
+          </div>
         </div>
 
-    </form>
+        <form class="divAzul" method="post" action="/registro/crear">
+          <input
+            type="text"
+            name="nombre"
+            class="cuadrosDatos"
+            id="numeroTarjeta"
+            onkeypress="return soloLetras(event)"
+            onpaste="return false"
+            placeholder="Nombre:"
+            required
+          />
 
-</body>
+          <input
+            type="text"
+            name="apellido"
+            class="cuadrosDatos"
+            id="apellido"
+            onkeypress="return soloLetras(event)"
+            onpaste="return false"
+            placeholder="Apellidos:"
+            required
+          />
 
-<script src="/assets/js/pago/pagoScripts.js"></script>
+          <input
+            type="text"
+            name="correo"
+            class="cuadrosDatos"
+            id="correo"
+            placeholder="e-mail:"
+            required
+          />
 
+          <input
+            type="text"
+            name="direccion"
+            class="cuadrosDatos"
+            id="direccion"
+            placeholder="Dirección:"
+            required
+          />
+
+          <input
+            type="text"
+            name="telefono"
+            class="cuadrosDatos"
+            id="telefono"
+            onkeypress="return soloNumeros(event)"
+            onpaste="return false"
+            maxlength="10"
+            placeholder="Teléfono:"
+            required
+          />
+          <button class="btnRegistro">Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="/assets/js/pago/pagoScripts.js"></script>
 </html>

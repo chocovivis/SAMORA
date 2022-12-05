@@ -12,7 +12,8 @@ EmpleadoModel.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
-      autoIncrement:true
+      unique: true,
+      autoIncrement: true,
     },
     idUsuario:{
       type: DataTypes.INTEGER,

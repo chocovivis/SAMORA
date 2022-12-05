@@ -14,6 +14,7 @@ UsuarioModel.init(
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
+      unique: true,
     },
     correo: {
       type: DataTypes.STRING(100),

@@ -7,3 +7,4 @@ export default interface ClienteType {
     telefono?: String;
   }
 //cambió este modelo ojo
+//thanks

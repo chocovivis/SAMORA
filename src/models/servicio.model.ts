@@ -10,7 +10,8 @@ ServicioModel.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
-      autoIncrement:true
+      unique: true,
+      autoIncrement: true,
     },
     nombre: {
       type: DataTypes.STRING(60),

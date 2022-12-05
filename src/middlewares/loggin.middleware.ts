@@ -13,10 +13,9 @@ export function createLogginMiddleware(rolUser:string[]){
             return res.redirect("/loggin/signin");
         }
         //
-        if( !(rolUser.includes(req.session.user.rol as string) || rolUser.includes("*"))){
+       /*  if( !(rolUser.includes(req.session.user.rol as string) || rolUser.includes("*"))){
             return res.redirect("/admon/unauthorized");
-        }
-
+        }**/
         next();
     }
 

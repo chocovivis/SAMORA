@@ -28,10 +28,6 @@ ClienteModel.init(
       type: DataTypes.STRING(20),
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING(30),
-      allowNull: false,
-    },
     direccion: {
       type: DataTypes.STRING(60),
       allowNull: false,

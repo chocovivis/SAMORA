@@ -8,14 +8,16 @@ import { Request, Response, NextFunction } from "express";
 export function createLogginMiddleware(rolUser:string[]){
 
     return (req: Request, res: Response, next: NextFunction) => {
-    
         if (!req.session.user) {
             return res.redirect("/loggin/signin");
         }
-        //
-       /*  if( !(rolUser.includes(req.session.user.rol as string) || rolUser.includes("*"))){
+        
+        if( !(rolUser.includes(req.session.user.rol as string) || rolUser.includes("*"))){
             return res.redirect("/admon/unauthorized");
-        }**/
+        }
+        console.log("**********************************")
+        console.log(rolUser)
+        console.log("**********************************")
         next();
     }
 

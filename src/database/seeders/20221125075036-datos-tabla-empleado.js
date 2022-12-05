@@ -6,23 +6,19 @@ module.exports = {
     return queryInterface.bulkInsert("empleado", [
       {
         idEmpleado: 1,
+        idUsuario: 1,
         nombre: "Admin Admin Admin",
         puesto: "Admin",
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         idEmpleado: 2,
-        nombre: "Doe",
+        idUsuario: 2,
+        nombre: "Owner Owner Owner",
         puesto: "Gerente",
-      },
-      {
-        idEmpleado: 3,
-        nombre: "Luis",
-        puesto: "Barman",
-      },
-      {
-        idEmpleado: 4,
-        nombre: "Yajil",
-        puesto: "Recepcion",
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
     ]);
   },

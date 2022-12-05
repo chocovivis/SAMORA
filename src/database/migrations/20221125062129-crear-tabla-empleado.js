@@ -10,6 +10,14 @@ module.exports = {
         allowNull: false,
         autoIncrement:true
       },
+      idUsuario: {
+        type:  Sequelize.DataTypes.INTEGER,
+        allowNull: false,
+        references:{
+          model:'usuario',
+          key: 'idUsuario',
+        }
+      },
       nombre: {
         type: Sequelize.DataTypes.STRING(60),
         allowNull: false,
@@ -17,6 +25,16 @@ module.exports = {
       puesto: {
         type: Sequelize.DataTypes.STRING(10),
         allowNull: false,
+      },
+      createdAt: {
+        allowNull: true,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('NOW()')
+      },
+      updatedAt: {
+        allowNull: true,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('NOW()')
       }
     })
   },

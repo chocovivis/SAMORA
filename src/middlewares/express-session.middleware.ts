@@ -15,6 +15,7 @@ export const sessionConfig = session({
   resave: false,
   saveUninitialized: false,
   cookie: {
+    path:'/',
     secure: false,
     httpOnly: true,
     signed: true,
@@ -24,7 +25,7 @@ export const sessionConfig = session({
 
 export const sessionMiddleware = (req: Request, res: Response, next: NextFunction)=> {
   const {user} =  req.session;
-  console.log(user);
+  // console.log(user);
   res.locals.user = user;
   next();
 }

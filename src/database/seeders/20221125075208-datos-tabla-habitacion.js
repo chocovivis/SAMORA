@@ -12,7 +12,6 @@ module.exports = {
         estado: true,
         createdAt: new Date(),
         updatedAt: new Date()
-        // idEmpleado: 2,
       },
       {
         numHabitacion: 2,

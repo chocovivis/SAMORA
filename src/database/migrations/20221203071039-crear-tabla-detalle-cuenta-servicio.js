@@ -3,25 +3,28 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    return queryInterface.createTable('reservacion', {
-      idReservacion: {
+    return queryInterface.createTable('detalle_cuenta_servicio', {
+      idDetalleCuentaServicio: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
-        autoIncrement: true
+        autoIncrement: true,
       },
-      fechaInicio: {
-        type: Sequelize.DataTypes.DATEONLY,
-        allowNull: false
-      },
-      fechaFin: {
-        type: Sequelize.DataTypes.DATEONLY,
-        allowNull: false
-      },
-      estado: {
-        type: Sequelize.DataTypes.STRING,
+      idDetalleCuenta: {
+        type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
-        defaultValue: "PENDIENTE",
+        references:{
+          model:'detalle_cuenta',
+          key: 'idDetalleCuenta',
+        }
+      },
+      idServicio: {
+        type: Sequelize.DataTypes.INTEGER,
+        allowNull: false,
+        references:{
+          model:'servicio',
+          key: 'idServicio',
+        }
       },
       createdAt: {
         allowNull: true,
@@ -29,7 +32,7 @@ module.exports = {
         defaultValue: Sequelize.literal('NOW()')
       },
       updatedAt: {
-        allowNull:true,
+        allowNull: true,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('NOW()')
       }
@@ -37,6 +40,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.dropTable('reservacion');
+    return queryInterface.dropTable('detalle_cuenta_servicio');
   }
 };

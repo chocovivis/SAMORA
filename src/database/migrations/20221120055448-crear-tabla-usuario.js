@@ -11,10 +11,6 @@ module.exports = {
         allowNull: false,
         autoIncrement: true
       },
-      idEmpleado: {
-        type:  Sequelize.DataTypes.INTEGER,
-        allowNull: false,
-      },
       correo: {
         type:  Sequelize.DataTypes.STRING(100),
         allowNull: false,

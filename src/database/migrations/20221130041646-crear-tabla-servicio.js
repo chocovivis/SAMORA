@@ -14,6 +14,10 @@ module.exports = {
       type: Sequelize.DataTypes.STRING(60),
       allowNull: false,
     },
+    descripcion: {
+      type: Sequelize.DataTypes.STRING(190),
+      allowNull: true,
+    },
     precio: {
       type: Sequelize.DataTypes.DOUBLE,
         allowNull: false,

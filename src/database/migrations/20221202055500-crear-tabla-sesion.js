@@ -11,8 +11,12 @@ module.exports = {
         autoIncrement: true,
       },
       idUsuario: {
-        type: Sequelize.DataTypes.INTEGER,
+        type:  Sequelize.DataTypes.INTEGER,
         allowNull: false,
+        references:{
+          model:'usuario',
+          key: 'idUsuario',
+        }
       },
       fecha_cierre: {
         type: Sequelize.DataTypes.DATE,

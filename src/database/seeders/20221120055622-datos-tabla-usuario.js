@@ -12,9 +12,9 @@ module.exports = {
       {
         idUsuario: 1,
         correo: "admin@samora.com",
-        contrasenia: "adminSamora@01",
+        contrasenia: "$2b$10$f4b362aWyD1ZQe2MEfukge1nh/n3TVDpTQd/8k8q8sEOMLLkhEJji",
         estatus: 'A',
-        rol: '2222',
+        rol: '1111',
         createdAt: new Date(),
         updatedAt: new Date()
       },

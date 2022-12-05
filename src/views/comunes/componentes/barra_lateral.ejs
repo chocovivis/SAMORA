@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/barra_lateral.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/barra_lateral.css" />
     <title>Barra lateral</title>
-</head>
+  </head>
 
-<body class="">
-
+  <body class="">
     <header>
-        <!-- Parte de los encabezados de la derecha -->
-        <div class="container">
-            <!-- Ajusta el botón de menú a la altura del logo -->
-            <div class="btn-menu">
-                <label for="btn-menu">☰</label>
-            </div>
-            <div class="logo">
-                <h1>SAMORA</h1>
-            </div>
-            <nav class="menu">
-                <a href="/">Inicio</a>
-                <a href="/quienes-somos">Nosotros</a>
-                <a href="https://www.samoraluxuryresort.com/">Blog</a>
-            </nav>
+      <!-- Parte de los encabezados de la derecha -->
+      <div class="container">
+        <!-- Ajusta el botón de menú a la altura del logo -->
+        <div class="btn-menu">
+          <label for="btn-menu">☰</label>
         </div>
+        <div class="logo">
+          <h1>SAMORA</h1>
+        </div>
+        <nav class="menu">
+          <a href="/">Inicio</a>
+          <a href="/quienes-somos">Nosotros</a>
+          <a href="https://www.samoraluxuryresort.com/">Blog</a>
+        </nav>
+      </div>
     </header>
 
     <div>
-        <div class="capa"></div>
-        <!--	--------------->
-        <input type="checkbox" id="btn-menu">
-        <div class="container-menu">
-            <div class="cont-menu">
-                <nav>
-                    <a href="#">MENÚ</a>
-                    <a href="#">Reserva de habitaciones</a>
-                    <a href="/admon">Administración</a>
-                    <a href="/habitaciones">Nuestras habitaciones</a>
-                    <a href="#">Mi cuenta</a>
-                    <a href="#">Servicios</a>
-                </nav>
-                <label for="btn-menu">✖️</label>
+      <div class="capa"></div>
+      <!--	--------------->
+      <input type="checkbox" id="btn-menu" />
+      <div class="container-menu">
+        <div class="cont-menu">
+          <nav>
+            <a href="#">MENÚ</a>
+            <a href="#">Reserva de habitaciones</a>
 
-            </div>
+            <% if (isAdmin) {%>
+            <a href="/admon">Administración</a>
+            <% }%>
+            <a href="/habitaciones">Nuestras habitaciones</a>
+            <a href="#">Mi cuenta</a>
+            <a href="#">Servicios</a>
+          </nav>
+          <label for="btn-menu">✖️</label>
         </div>
-
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

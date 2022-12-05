@@ -13,13 +13,13 @@
 
     <header>
 
-        <%-include ("comunes/componentes/barra_lateral") -%>
+        <%-include ("comunes/componentes/barra_lateral",{isAdmin: admin}) -%>
 
     </header>
 
     <span class="botones-altura">
-        <button class="boton-ini-style color-primary label-font-style">Inicia sesión</button>
-        <button class="boton-res-style color-secundary label-font-style">Registrate</button>
+        <a href="/loggin/signin" class="boton-ini-style color-primary label-font-style">Inicia sesión</a>
+        <a href="/" class="boton-res-style color-secundary label-font-style">Registrate</a>
     </span>
 
 </body>

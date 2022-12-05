@@ -27,7 +27,7 @@ ReservacionModel.init(
       allowNull: false,
     },
     idCliente:{
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull:false,
     },
 

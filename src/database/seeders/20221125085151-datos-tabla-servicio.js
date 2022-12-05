@@ -11,21 +11,18 @@ module.exports = {
       "servicio",
       [
         {
-          idServicio: 1,
           nombre: "taxi",
           precio: 150,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          idServicio: 2,
           nombre: "tour",
           precio: 350,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          idServicio: 3,
           nombre: "massage",
           precio: 550,
           createdAt: new Date(),

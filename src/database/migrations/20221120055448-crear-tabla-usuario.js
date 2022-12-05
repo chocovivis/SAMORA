@@ -9,7 +9,8 @@ module.exports = {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
-        autoIncrement: true
+        autoIncrement: true,
+        unique: true,
       },
       correo: {
         type:  Sequelize.DataTypes.STRING(100),

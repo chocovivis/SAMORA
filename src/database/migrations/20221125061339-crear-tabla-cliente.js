@@ -9,7 +9,8 @@ module.exports = {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
-        autoIncrement:true
+        autoIncrement:true,
+        unique: true,
       },
       idUsuario: {
         type:  Sequelize.DataTypes.INTEGER,
@@ -26,10 +27,6 @@ module.exports = {
       apellido: {
         type: Sequelize.DataTypes.STRING(20),
         allowNull: false,
-      },
-      email:{
-          type:Sequelize.DataTypes.STRING(30),
-          allowNull:false,
       },
       direccion:{
           type:Sequelize.DataTypes.STRING(60),

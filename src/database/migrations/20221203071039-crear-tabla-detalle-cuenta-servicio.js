@@ -9,6 +9,7 @@ module.exports = {
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
+        unique: true,
       },
       idDetalleCuenta: {
         type: Sequelize.DataTypes.INTEGER,

@@ -1,6 +1,5 @@
 import nodemailer from "nodemailer";
 
-
 export const mailer = nodemailer.createTransport({
     service: process.env.MAILER_SERVICE,
     auth: {

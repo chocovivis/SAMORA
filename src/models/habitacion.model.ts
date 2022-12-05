@@ -11,7 +11,8 @@ HabitacionModel.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
-      autoIncrement:true
+      unique: true,
+      autoIncrement: true,
     },
     precio: {
       type: DataTypes.DOUBLE,

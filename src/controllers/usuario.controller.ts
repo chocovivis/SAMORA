@@ -4,6 +4,7 @@ import { sequelize } from "../database/database.config";
 import { ClienteModel } from "../models/cliente.model";
 import { UsuarioModel } from "../models/usuario.model";
 import * as authService from "../services/auth.service";
+import alert from 'alert';
 
 //REGISTROS DE CLIENTES, SE HARÁ OTRO PARA ADMINISTRADOR
 export async function createUsuario(req: Request, res: Response) {
@@ -39,8 +40,10 @@ export async function createUsuario(req: Request, res: Response) {
     await t.rollback();
     console.log("********Usuario Error**********");
     const error = e as Error;
-    res
+    alert("El usuario ya existe");
+    return res
       .status(StatusCodes.UNPROCESSABLE_ENTITY)
-      .json({ error: error, nameError: error.name, detail: error.message });
+      .redirect("/registro");
+      //.json({ error: error, nameError: error.name, detail: error.message });
   }
 }

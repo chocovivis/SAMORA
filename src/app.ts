@@ -22,7 +22,7 @@ import serviciosRouter from "./routes/servicios.route";
 import servicioRouter from "./routes/servicios.route";
 import logginRouter from "./routes/loggin.route";
 import { sessionConfig ,sessionMiddleware } from "./middlewares/express-session.middleware";
-import empleadoRouter from "./routes/empleado.route";
+
 import clienteRouter from "./routes/cliente.route";
 
 //inicializaciones
@@ -59,7 +59,6 @@ app.use('/admon',adminRouter);
 app.use('/registro',registroRouter);
 app.use('/servicios',servicioRouter);
 app.use('/loggin', logginRouter);
-app.use('/empleado',empleadoRouter);
 app.use('/cliente',clienteRouter);
 
 

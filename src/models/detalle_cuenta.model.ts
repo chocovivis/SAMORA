@@ -36,17 +36,19 @@ DetalleCuentaModel.init(
 
 DetalleCuentaModel.belongsTo(ReservacionModel, {
   foreignKey: { name: "idReservacion" },
-  as: "Reservacion",
+  as: "reservacion",
 });
-// ReservacionModel.hasOne(DetalleCuentaModel);
+ReservacionModel.hasOne(DetalleCuentaModel);
 DetalleCuentaModel.belongsToMany(ServicioModel, {
   through: "detalle_cuenta_servicio",
+  uniqueKey: 'id',
   as: "servicios",
   foreignKey: "idServicio",
 });
 
 ServicioModel.belongsToMany(DetalleCuentaModel, {
   through: "detalle_cuenta_servicio",
+  uniqueKey: 'id',
   as: "detalle_cuenta",
   foreignKey: "idDetalleCuenta",
 });

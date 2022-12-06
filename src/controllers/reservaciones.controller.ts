@@ -4,7 +4,10 @@ import { ReservacionModel } from "../models/reservacion.model";
 import ReservacionType from "../types/reservacion.type";
 
 export async function reservacionesResponse(req: Request, res: Response) {
-  const reservaciones = await ReservacionModel.findAll({ include: { all: true }  });
+  const reservaciones = await ReservacionModel.findAll({ 
+    include: { all: true },
+    order: [["idReservacion", "ASC"]],
+  });
  // console.table( JSON.stringify(reservaciones));
   //return res.send(reservaciones);
   return res.render("reservaciones", {isAdmin: isAdmin(req), reservaciones, formatoFecha: formatoFecha });
@@ -44,7 +47,6 @@ export const eliminarReservacion = async (
 
 
 const formatoFecha = (fecha: string) => {
-  console.log(fecha);
   return new Intl.DateTimeFormat("es", {
     day: "2-digit",
     dayPeriod: "long",

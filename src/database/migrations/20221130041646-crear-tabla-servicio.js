@@ -2,7 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     return queryInterface.createTable('servicio', {
       idServicio: {
         type: Sequelize.DataTypes.INTEGER,
@@ -11,16 +11,16 @@ module.exports = {
         autoIncrement: true,
         unique: true,
       },
-    nombre: {
-      type: Sequelize.DataTypes.STRING(60),
-      allowNull: false,
-    },
-    descripcion: {
-      type: Sequelize.DataTypes.STRING(190),
-      allowNull: true,
-    },
-    precio: {
-      type: Sequelize.DataTypes.DOUBLE,
+      nombre: {
+        type: Sequelize.DataTypes.STRING(60),
+        allowNull: false,
+      },
+      descripcion: {
+        type: Sequelize.DataTypes.STRING(190),
+        allowNull: true,
+      },
+      precio: {
+        type: Sequelize.DataTypes.DOUBLE,
         allowNull: false,
       },
       createdAt: {
@@ -29,14 +29,14 @@ module.exports = {
         defaultValue: Sequelize.literal('NOW()')
       },
       updatedAt: {
-        allowNull:true,
+        allowNull: true,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('NOW()')
       }
     })
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     return queryInterface.dropTable('servicio');
   }
 };

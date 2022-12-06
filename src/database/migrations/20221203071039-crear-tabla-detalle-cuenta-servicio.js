@@ -4,7 +4,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.createTable('detalle_cuenta_servicio', {
-      idDetalleCuentaServicio: {
+      id: {
         type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
@@ -14,19 +14,24 @@ module.exports = {
       idDetalleCuenta: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
-        references:{
-          model:'detalle_cuenta',
+        references: {
+          model: 'detalle_cuenta',
           key: 'idDetalleCuenta',
         }
       },
       idServicio: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
-        references:{
-          model:'servicio',
+        references: {
+          model: 'servicio',
           key: 'idServicio',
         }
       },
+      precio: {
+        type: Sequelize.DataTypes.DOUBLE,
+        allowNull: true,
+      },
+
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE,

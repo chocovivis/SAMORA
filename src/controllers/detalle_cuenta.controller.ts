@@ -4,12 +4,23 @@ import { DetalleCuentaServicioModel } from "../models/detalle_cuenta_servicio.mo
 import { ServicioModel } from "../models/servicio.model";
 let servicios = [];
 
-export async function detalleCuentaReservacionResponse(req: Request,res: Response) {
+export async function detalleCuentaReservacionResponse(
+  req: Request,
+  res: Response
+) {
   const idReservacion = req.params.idReservacion;
   let cuenta = await DetalleCuentaModel.findOne({
     include: "reservacion",
     where: { idReservacion: idReservacion },
   });
+
+  if (!cuenta) {
+    cuenta = await DetalleCuentaModel.create({
+      totalFinal: 0,
+      estado: true,
+      idReservacion: Number(idReservacion),
+    });
+  }
 
   servicios = await ServicioModel.findAll();
   let idDetalleCuenta = cuenta?.getDataValue("idDetalleCuenta");
@@ -28,18 +39,11 @@ export async function detalleCuentaReservacionResponse(req: Request,res: Respons
   return res.render("detalle_cuenta", { cuenta, serviciosCuenta, servicios });
 }
 
-
-export function quitarServicioResponse(req: Request,res: Response) {
+export function quitarServicioResponse(req: Request, res: Response) {
   const id = req.params.idServicion;
   // return res.send(id)
   res.status(200).json(id);
 }
-
-
-
-
-
-
 
 // servicios.forEach(element => {
 //   let idServicio = element.getDataValue('idServicio');
@@ -48,4 +52,3 @@ export function quitarServicioResponse(req: Request,res: Response) {
 //     idServicio,
 //   })
 // });
-

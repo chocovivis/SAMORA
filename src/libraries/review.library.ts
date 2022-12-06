@@ -7,3 +7,9 @@ export function isAdmin(req: Request){
 export function isAuth(req: Request){
   return req?.session.user!==undefined;
 }
+
+export function getUser(req: Request){
+  if(isAuth(req)){
+    return req?.session.user
+  }
+}

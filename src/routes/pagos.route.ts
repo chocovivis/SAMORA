@@ -3,6 +3,6 @@ import { pagosResponse } from "../controllers/pagos.controller";
 
 const pagosRouter: Router = Router();
 
-pagosRouter.get("/",pagosResponse);
+pagosRouter.get("/:id",pagosResponse);
 
 export default pagosRouter;

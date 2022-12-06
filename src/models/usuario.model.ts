@@ -53,13 +53,16 @@ UsuarioModel.init(
 UsuarioModel.hasMany(EmpleadoModel,{
   foreignKey: "idUsuario",
   sourceKey: "idUsuario",
+  as: "empleado",
 });
 UsuarioModel.hasMany(ClienteModel,{
   foreignKey: "idUsuario",
   sourceKey: "idUsuario",
+  as: "cliente",
 });
 UsuarioModel.hasMany(SesionModel, {
   foreignKey: "idUsuario",
   sourceKey: "idUsuario",
+  as: "session",
 });
 

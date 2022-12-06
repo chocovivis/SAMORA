@@ -1,9 +1,9 @@
 import express, { Application } from "express";
 import path from 'path';
 import morgan from "morgan";
-//import dotenv from "dotenv";
+import dotenv from "dotenv";
 
-//dotenv.config();
+dotenv.config();
 //Importando rutas
 import indexRouter from './routes/index.route';
 import habitacionRouter from "./routes/habitacion.route";

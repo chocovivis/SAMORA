@@ -1,3 +1,6 @@
+import ClienteType from "./cliente.type";
+import EmpleadoType from "./empleado.type";
+
 export default interface UsuarioType {
     idUsuario?: number;
     correo?: string;
@@ -5,4 +8,6 @@ export default interface UsuarioType {
     estatus?: string;
     rol?: string;
     token_restauracion?: string;
+    cliente?: ClienteType[];
+    empleado?: EmpleadoType[];
 }

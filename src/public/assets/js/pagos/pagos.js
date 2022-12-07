@@ -1,4 +1,5 @@
 var $botones = document.getElementsByTagName('button');
+var habid ;
 
 for (const boton of $botones) {
   if (boton.innerText == "true") {
@@ -12,9 +13,11 @@ for (const boton of $botones) {
     console.log(event.target.id);
     if (boton.outerText == "Disponible") {
       location.href = `/pago/${event.target.id}`;
+      
     } if (boton.outerText == "Ocupado") {
       alert("Esta habitación no se puede reservar");
     }
   });
 
 }
+

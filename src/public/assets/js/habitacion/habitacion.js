@@ -2,7 +2,7 @@ const habitacion = (() => {
     const $bodyTable = document.getElementById("data");
     const BASE_URL = "/catalogo/habitacion";
     const $containerTable = document.getElementById("containerTable");
-  
+    
     const _getData = async () => {
       const response = await http.get(BASE_URL);
       $bodyTable.innerHTML = "";
@@ -26,6 +26,7 @@ const habitacion = (() => {
       const numHabitacion = $btn.getAttribute("item-id");
       const response = await http.delete({url:`${BASE_URL}/${numHabitacion}`});
       habitacion.getData();
+        
     };
 
     const _createRow = (item = {}, itemId = "") => {

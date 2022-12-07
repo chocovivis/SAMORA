@@ -37,6 +37,7 @@ export async function updateHabitacion(req: Request, res: Response) {
 export async function deleteHabitacion(req: Request, res: Response) {
   const {idProducto} = req.params;
   const entity = await HabitacionModel.findByPk(idProducto);
+  console.log(entity);
   await entity?.destroy();
   res.status(204).json({ok:""});
 }

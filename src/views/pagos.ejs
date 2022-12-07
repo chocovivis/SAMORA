@@ -10,7 +10,7 @@
 
   <body>
     <header><%-include ("comunes/componentes/barra_lateral2") -%></header>
-
+    <input id="lista-reservaciones" type="hidden" value="<%= JSON.stringify(reservaciones)%>"/>
     <!-- <div class="letreroPago"> -->
     <!-- <label class="titulo"> OPCIONES DE PAGO </label> -->
     <!-- </div> -->
@@ -28,6 +28,7 @@
         <div>
           <span class="title">Fecha de llegada </span>
           <input
+            id="fechaInicio"
             name="fechaInicio"
             type="date"
             min="2022-06-12"
@@ -37,6 +38,7 @@
         <div>
           <span class="title">Fecha de Salida </span>
           <input
+            id="fechaFin"
             name="fechaFin"
             type="date"
             min="2022-06-12"

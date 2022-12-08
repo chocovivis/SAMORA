@@ -5,6 +5,6 @@ import { validaRutaEmpleado } from "../middlewares/empleado.middleware";
 
 const reporteRouter: Router = Router();
 
-reporteRouter.get("/",reporteResponse);
+reporteRouter.get("/",validaRutaEmpleado,reporteResponse);
 
 export default reporteRouter;

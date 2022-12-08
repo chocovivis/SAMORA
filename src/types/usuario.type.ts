@@ -1,5 +1,5 @@
 import ClienteType from "./cliente.type";
-import EmpleadoType from "./empleado.type";
+
 
 export default interface UsuarioType {
     idUsuario?: number;
@@ -9,5 +9,5 @@ export default interface UsuarioType {
     rol?: string;
     token_restauracion?: string;
     cliente?: ClienteType[];
-    empleado?: EmpleadoType[];
+    
 }

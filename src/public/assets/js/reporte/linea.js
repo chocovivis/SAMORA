@@ -1,13 +1,17 @@
 const ctxlinea = document.getElementById("linea");
+const datosLinea = document.getElementById("datos-linea").value;
+let d =  JSON.parse(datosLinea)
+const labelsLinea = Object.keys(d) 
+const valuesLinea = Object.values(d) 
 
 new Chart(ctxlinea, {
   type: "line",
   data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: labelsLinea,
     datasets: [
       {
-        label: "# de reservaciones por mes",
-        data: [12, 19, 3, 5, 2, 3],
+        label: "# Número de veces que se reservó una habitación",
+        data: valuesLinea,
         borderWidth: 3,
         borderColor:"purple",
         backgroundColor:"purple",

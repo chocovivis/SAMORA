@@ -1,15 +1,18 @@
 const ctxb = document.getElementById("barra");
+const datosBarra = document.getElementById("datos-barra").value;
+const MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+console.log(JSON.parse(datosBarra));
 
 new Chart(ctxb, {
   type: "bar",
   data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: MESES,
     datasets: [
       {
-        label: "Números de veces de habitaciones reservadas",
-        data: [12, 19, 3, 5, 2, 3],
+        label: "# de reservaciones por mes",
+        data: JSON.parse(datosBarra),
         borderWidth: 1,
-        backgroundColor:"orange"
+        backgroundColor: "orange"
       },
     ],
   },

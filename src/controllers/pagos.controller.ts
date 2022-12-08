@@ -11,6 +11,5 @@ export async function pagosResponse(req: Request, res: Response) {
     },
   });
 
-  // return res.send(reservaciones);
   return res.render("pagos", { idHabitacion: id, reservaciones });
 }

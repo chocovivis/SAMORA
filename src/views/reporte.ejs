@@ -20,9 +20,11 @@
       </div>
       <div class="barra">
         <div class="linea-grafica">
+          <input type="hidden" id="datos-linea" value="<%= JSON.stringify(datosLinea)%>" />
           <canvas id="linea"></canvas>
         </div>
         <div class="barra-grafica">
+          <input type="hidden" id="datos-barra" value="<%= JSON.stringify(datosBarra)%>" />
           <canvas id="barra"></canvas>
         </div>
       </div>

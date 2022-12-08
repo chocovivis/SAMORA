@@ -9,4 +9,3 @@ servicioRouter.get("/", servicioResponse);
 export default servicioRouter;
 
 
-

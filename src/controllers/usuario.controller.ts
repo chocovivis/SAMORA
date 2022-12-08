@@ -46,7 +46,7 @@ export async function createUsuario(req: Request, res: Response) {
     await t.rollback();
     console.log("********Usuario Error**********");
     const error = e as Error;
-    alert("El usuario ya existe");
+    alert("El correo electrónico ya está en uso");
     return res
       .status(StatusCodes.UNPROCESSABLE_ENTITY)
       .redirect("/registro");

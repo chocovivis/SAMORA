@@ -1,6 +1,6 @@
 import express, { Application } from "express";
 import path from 'path';
-import morgan from "morgan";
+//import morgan from "morgan";
 //import dotenv from "dotenv";
 //dotenv.config();
 //Importando rutas
@@ -17,7 +17,6 @@ import fileRouter from "./routes/file.route";
 import pagosRouter from "./routes/pagos.route";
 import adminRouter from "./routes/admin.route";
 import registroRouter from "./routes/registro.route";
-import serviciosRouter from "./routes/servicios.route";
 import servicioRouter from "./routes/servicios.route";
 import logginRouter from "./routes/loggin.route";
 import { sessionConfig, sessionMiddleware } from "./middlewares/express-session.middleware";
@@ -35,7 +34,7 @@ app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, './views'));
 
 //middlewares
-app.use(morgan("dev"));
+//app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, './public')))

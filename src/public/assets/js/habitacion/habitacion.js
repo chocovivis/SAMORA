@@ -14,9 +14,9 @@ const habitacion = (() => {
 
   const _actionButtonEditar = async (event) => {
     const $btn = event.target;
-    const numHabitacion = $btn.getAttribute("item-id");
+    const numHabitacion= $btn.getAttribute("item-id");
     const response = await http.get(`${BASE_URL}?numHabitacion=${numHabitacion}`);
-    formHab.setData(response[0], 'PUT');
+    formHab.setData(response[0],'PUT');
     formHab.setVisible(true);
     habitacion.setVisible(false);
   };
@@ -33,18 +33,16 @@ const habitacion = (() => {
     for (const key in item) {
       const value = item[key];
       const $td = document.createElement("td");
-      $td.innerText = value;
+        $td.innerText = value;  
       $row.appendChild($td);
 
     }
-
     $row.appendChild(_createBtnAction(item[itemId], "Editar", _actionButtonEditar));
-    if (item['estado'])
-      $row.appendChild(_createBtnAction(item[itemId], "Eliminar", _actionButtonEliminar));
+    $row.appendChild(_createBtnAction(item[itemId], "Eliminar",_actionButtonEliminar));
     return $row;
   };
 
-  const _createBtnAction = (itemId = 0, labelBtn = "", _actionFuntion = () => { }) => {
+  const _createBtnAction = (itemId = 0, labelBtn = "", _actionFuntion = () => {}) => {
     const $btn = document.createElement("button");
     $btn.innerText = labelBtn;
     $btn.className += "waves-effect waves-light btn my-basic mx-basic fondo-edit little-font-style";
@@ -72,7 +70,7 @@ const habitacion = (() => {
     $btnNuevo.addEventListener("click", () => {
       habitacion.setVisible(false);
       formHab.setVisible(true);
-      habitacion.setData({}, 'POST')
+      habitacion.setData({},'POST')
     });
   };
 
@@ -80,9 +78,11 @@ const habitacion = (() => {
     init: () => {
       _initElements();
     },
-    setVisible: _setVisible,
-    getData: _getData
+    setVisible:_setVisible,
+    getData:_getData
   };
 })();
 
 habitacion.init();
+
+  

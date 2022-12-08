@@ -1,6 +1,9 @@
 import { Request, Response } from "express";
 import { ReservacionModel } from "../models/reservacion.model";
-
+/**
+ * Regresa la vista de los pagos
+ * 
+ */
 export async function pagosResponse(req: Request, res: Response) {
   const data = { title: "Pagos" };
   let { id } = req.params;

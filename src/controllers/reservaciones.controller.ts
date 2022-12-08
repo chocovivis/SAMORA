@@ -1,6 +1,8 @@
+import alert from "alert";
 import { Request, Response } from "express";
 import { isAdmin, isAuth, getUser } from "../libraries/review.library";
 import { DetalleCuentaModel } from "../models/detalle_cuenta.model";
+import { HabitacionModel } from "../models/habitacion.model";
 import { ReservacionModel } from "../models/reservacion.model";
 import ReservacionType from "../types/reservacion.type";
 /**
@@ -24,18 +26,24 @@ export async function crearReservacionResponse(req: Request, res: Response) {
   const { fechaInicio, fechaFin, numHabitacion } = req.body;
 
   let user = getUser(req);
-  let idCliente = user && user?.cliente && user?.cliente[0].idCliente;
+  let idCliente = user && user?.cliente && user?.cliente[0]?.idCliente;
   if (idCliente) {
     await ReservacionModel.create({
       fechaInicio,
       fechaFin,
-      estado:'PENDIENTE',
+      estado: "PENDIENTE",
       idCliente,
       numHabitacion,
     });
+    
+    await HabitacionModel.update(
+      { estado: false },
+      { where: { numHabitacion } }
+      );
     return res.redirect("/");
   } else {
-    return res.send("Inicia sesión para seguir navegando");
+    alert("Error");
+    return res.redirect("/loggin/signin");
   }
 }
 
@@ -74,7 +82,7 @@ export const eliminarReservacion = async (
 const formatoFecha = (fecha: string) => {
   return new Intl.DateTimeFormat("es", {
     day: "2-digit",
-    dayPeriod: "long",
     month: "short",
+    year: "numeric",
   }).format(new Date(fecha));
 };

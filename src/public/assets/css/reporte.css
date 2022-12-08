@@ -1,106 +1,38 @@
-body {
-    background-color: #dbd1cf;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: 0;
+.background-reporte {
+  background-color: #135c7d;
+}
+.contenedor-titulo {
+  width: 100%;
+  padding-top: 2rem;
+  font-family: pptelegraf;
 }
 
-h1{
-    color: #103444;
+.titulo-reporte {
+  text-align: center;
+  color: white;
+  margin: 0px;
+  font-size: 30px;
+  font-family: pptelegraf;
+}
+.contenedor-reporte {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-form{
-    flex-direction: column;
-    height: 100%;
+.circulo-grafica{
+  width: 36%;
 }
 
-html{
-    height: 100%;
+.barra{
+  width: 37%;
 }
-
-.todoAlto{
-    height: 100%;
+.linea-grafica{
+  margin-bottom: 2rem;
 }
-
-.divBlanco {
-    background-color: #dbd1cf;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.centrarImgLobby{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.imgLobby{
-    width: 65%;
-    border-top-left-radius:50px;
-    border-top-right-radius: 50px;
-}
-
-.blancoLetrero{
-    height: 20%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@font-face {
-    font-family: pptelegraf;
-    src: url(../fonts/PPTelegraf-UltraLight.otf);
-}
-
-.fuenteTitulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    color: #103444;
-    font-family: pptelegraf;
-    font-weight: bolder;
-    height: 50px;
-    margin: 40px;
-}
-
-.divAzul {
-    width: 100%;
-    height: 100%;
-    background-color: #103444;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.columnaBlancaAzul{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.cuadrosDatos{
-    background-color: #103444;
-    width: 70%;
-    height: 10%;
-    border-top: #103444;
-    border-left: #103444;
-    border-right: #103444;
-    color: #ffffff;
-}
-
-.btnRegistro{
-    margin-top: 7%;
-    border-radius: 25px;
-    font-size: 16px;
-    width: 20%;
-    height: 7%;
-    border: 0;
-    cursor: pointer;
+.centrar-elemento {
+  display: flex;
+  justify-content: space-around;
 }

@@ -58,8 +58,8 @@ app.use('/admon', adminRouter);
 app.use('/registro', registroRouter);
 app.use('/servicios', servicioRouter);
 app.use('/loggin', logginRouter);
-
-app.use('/cliente', clienteRouter);
-app.use('/reporte', reporteRouter);
+// app.use('/empleado',empleadoRouter);
 app.use('/cliente',clienteRouter);
+app.use('/reporte',reporteRouter);
+
 export default app;

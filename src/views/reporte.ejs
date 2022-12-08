@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <%- include("comunes/componentes/headers-components")-%>
     <link rel="stylesheet" href="assets/css/reporte.css" />
-    <title>Registro</title>
-    <script>
-        src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.js"
-    </script>
-</head>
-
-<body>
+    <script src="/assets/js/chart/dist/chart.umd.js"></script>
+    <title>Reporte</title>
+  </head>
+  <body class="background-reporte">
     <header>
-        <%-include ("comunes/componentes/barra_lateral3") -%>
+      <%-include ("comunes/componentes/barra_lateral",{isAdmin}) -%>
     </header>
-
-    <div>
-        <canvas id="myChart"></canvas>
+    <div class="contenedor-titulo">
+      <h1 class="titulo-reporte">Reporte</h1>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <div class="todoAlto">
-        <div class="columnaBlancaAzul">
-            <div class="divBlanco">
-                <div class="blancoLetrero">
-                    <label class="fuenteTitulo"> GANANCIAS TOTALES </label>
-                </div>
-                <div class="blancoImagen centrarImgLobby">
-
-                </div>
-            </div>
-
+    <section class="contenedor-reporte centrar-elemento">
+      <div class="circulo-grafica">
+        <canvas id="circulo"></canvas>
+      </div>
+      <div class="barra">
+        <div class="linea-grafica">
+          <input type="hidden" id="datos-linea" value="<%= JSON.stringify(datosLinea)%>" />
+          <canvas id="linea"></canvas>
         </div>
-    </div>
-</body>
-<script src="/assets/js/reporte/reporte.js"></script>
+        <div class="barra-grafica">
+          <input type="hidden" id="datos-barra" value="<%= JSON.stringify(datosBarra)%>" />
+          <canvas id="barra"></canvas>
+        </div>
+      </div>
+    </section>
+    <script src="/assets/js/reporte/barras.js"></script>
+    <script src="/assets/js/reporte/linea.js"></script>
+    <script src="/assets/js/reporte/circulo.js"></script>
+  </body>
 </html>

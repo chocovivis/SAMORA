@@ -1,10 +1,16 @@
 import { Request, Response } from "express";
 import {HabitacionModel} from "../models/habitacion.model";
-
+/**
+ * Funcion que permite ver la habitacion (la vista) 
+ * 
+ */
 export function verHabitacion(req: Request, res: Response) {
   return res .render("habitacion/insert-hab"); 
 } 
-
+/**
+ * Lee la habitación de la bd
+ * 
+ */
 export async function readHabitacion(req: Request, res: Response) {
   const {query:where} = req
   const habitaciones = await HabitacionModel.findAll({
@@ -14,6 +20,10 @@ export async function readHabitacion(req: Request, res: Response) {
   });
   res.status(200).json(habitaciones);
 }
+/**
+ * Crea una habitación con los datos de body
+ * 
+ */
 
 export async function createHabitacion(req: Request, res: Response) {
   try {
@@ -26,6 +36,10 @@ export async function createHabitacion(req: Request, res: Response) {
   }
 }
 
+/**
+ * Actualiza un habitación con los datos de body (formulario)
+ * 
+ */
 export async function updateHabitacion(req: Request, res: Response) {
   const {numHabitacion} = req.params;
   const {body} = req;
@@ -33,7 +47,10 @@ export async function updateHabitacion(req: Request, res: Response) {
   await entity?.update(body);
   res.status(201).json(entity?.toJSON());
 }
-
+/**
+ * Borra la habitación por id
+ * 
+ */
 export async function deleteHabitacion(req: Request, res: Response) {
   const {idProducto} = req.params;
   const entity = await HabitacionModel.findByPk(idProducto);

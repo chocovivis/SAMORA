@@ -4,12 +4,19 @@ import {
   isValidPassword,
 } from "../libraries/bycript.library";
 import { UsuarioModel } from "../models/usuario.model";
+/**
+ * Carga la vista del login 
+ * 
+ */
 
 export function logginView(req: Request, res: Response) {
   const { error } = req.query;
   res.render("login/login-view", { error });
 }
-
+/**
+ * Logea al usuario
+ * 
+ */
 export async function logginUsuario(req: Request, res: Response) {
   try {
     const { body } = req;
@@ -40,7 +47,10 @@ export async function logginUsuario(req: Request, res: Response) {
     res.send("error")
   }
 }
-
+/**
+ * Cierra la sesión del usuario
+ * 
+ */
 export async function loggout(req: Request, res: Response) {
   req.session.destroy((err) => {
     if (err) {

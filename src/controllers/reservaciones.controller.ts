@@ -3,7 +3,10 @@ import { isAdmin, isAuth, getUser } from "../libraries/review.library";
 import { DetalleCuentaModel } from "../models/detalle_cuenta.model";
 import { ReservacionModel } from "../models/reservacion.model";
 import ReservacionType from "../types/reservacion.type";
-
+/**
+ * Regresa la vista de la reservación
+ * 
+ */
 export async function reservacionesResponse(req: Request, res: Response) {
   const reservaciones = await ReservacionModel.findAll({
     include: { all: true },

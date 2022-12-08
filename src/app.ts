@@ -23,6 +23,8 @@ import servicioRouter from "./routes/servicios.route";
 import logginRouter from "./routes/loggin.route";
 import { sessionConfig, sessionMiddleware } from "./middlewares/express-session.middleware";
 import empleadoRouter from "./routes/empleado.route";
+import { sessionConfig ,sessionMiddleware } from "./middlewares/express-session.middleware";
+
 import clienteRouter from "./routes/cliente.route";
 import reporteRouter from "./routes/reporte.route";
 
@@ -62,5 +64,5 @@ app.use('/loggin', logginRouter);
 app.use('/empleado', empleadoRouter);
 app.use('/cliente', clienteRouter);
 app.use('/reporte', reporteRouter);
-
+app.use('/cliente',clienteRouter);
 export default app;

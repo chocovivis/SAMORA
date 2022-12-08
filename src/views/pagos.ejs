@@ -1,160 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/pagos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/pagos.css" />
     <title>Métodos de pago</title>
+  </head>
 
-</head>
+  <body>
+    <header><%-include ("comunes/componentes/barra_lateral2") -%></header>
 
-<body>
+    <!-- <div class="letreroPago"> -->
+    <!-- <label class="titulo"> OPCIONES DE PAGO </label> -->
+    <!-- </div> -->
 
-    <header>
-
-        <%-include ("comunes/componentes/barra_lateral2") -%>
-
-    </header>
-
-    <div class="letreroPago">
-        <label class="titulo">
-            OPCIONES DE PAGO
-        </label>
-    </div>
-
-    <form class="tamanoForm" id="formTarjeta">
-        <!-- Div de métodos de pago -->
-
-        <div class="centrarFormulario redondearBordes tamanoFormulario">
-
-            <div class="alinearColumnas">
-
-                <!-- Div del título -->
-
-                <div class="alinearColumnas colorArribaAbajo">
-                    <label class="centrarTitulo espacios fuenteTitulo">
-                        Agregar una tarjeta de crédito o débito
-                    </label>
-                </div>
-
-                <div class="colorCentro fuenteDatos">
-                    <!-- Div de datos de la tarjeta -->
-
-                    <div class="izqDerDatos">
-
-                        <div class="datosTarjeta">
-
-                            <div class="espacios">
-                                <label>
-                                    Número de tarjeta
-                                </label>
-                            </div>
-
-                            <div class="espacios">
-                                <label>
-                                    Nombre en la tarjeta
-                                </label>
-                            </div>
-
-                            <div class="espacios">
-                                <label>
-                                    Fecha de vencimiento
-                                </label>
-                            </div>
-
-                        </div>
-
-                        <div class="datosTarjetaCentro">
-                            <div class="alinearColumnas">
-                                <div class="espacios">
-                                    <input type="text" name="numeros" class="cuadroNumTarjeta" id="numeroTarjeta"
-                                        onkeypress="return soloNumeros(event)" onpaste="return false" minlength="16"
-                                        maxlength="16" placeholder="xxxx-xxxx-xxxx-xxxx" required>
-                                </div>
-                                <div class="espacios">
-                                    <input type="text" name="letras" class="cuadroNombre" id="nombreTarjeta"
-                                        onkeypress="return soloLetras(event)" onpaste="return false" maxlength="40"
-                                        required>
-                                </div>
-
-                                <div class="alinearFilas">
-
-                                    <div class="espacios">
-                                        <select name="mes" id="mesSelected" required>
-                                            <option value="1" selected>01</option>
-                                            <option value="2">02</option>
-                                            <option value="3">03</option>
-                                            <option value="4">04</option>
-                                            <option value="5">05</option>
-                                            <option value="6">06</option>
-                                            <option value="7">07</option>
-                                            <option value="8">08</option>
-                                            <option value="9">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="espacios">
-                                        <select name="anio" id="anioSelected" required>
-                                            <option value="2022" selected>2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                            <option value="2027">2027</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="datosTarjetaDer">
-                            <label class="espacios fuenteTarjetasAceptadas">
-                                Tarjetas aceptadas:
-                            </label>
-
-                            <div class="alinearColumnas">
-                                <div class="alinearFilas">
-                                    <img src="assets/img/Logo Paypal.png" class="tamanoPayPal">
-                                    <img src="assets/img/Logo Visa.png" class="tamanoVisa">
-                                </div>
-
-                                <div class="alinearFilas">
-                                    <img src="assets/img/Logo Mastercard.png" class="tamanoMastecard">
-                                    <img src="assets/img/Logo Mercado Pago.png" class="tamanoMercadoPago">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Div de botones -->
-
-                <div class="alinearFilas botonesDerecha colorArribaAbajo">
-                    <div>
-                        <button type="button" class="botonCancelar margenBotones" id="btnCancelar">
-                            Cancelar
-                        </button>
-                    </div>
-                    <div>
-                        <button type="button" class="botonAgregar margenBotones" id="btnAgregar">
-                            Agregar tarjeta
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <form class="tamanoForm" id="formTarjeta" method="post" action="/reservaciones/crear">
+      <!-- Div de métodos de pago -->
+      <input
+        name="numHabitacion"
+        id="idHabitacion"
+        type="hidden"
+        value="<%= idHabitacion%>"
+      />
+      <p class="titulo">Selecciona las fechas de reservación</p>
+      <div class="contenedor-fechas">
+        <div>
+          <span class="title">Fecha de llegada </span>
+          <input
+            name="fechaInicio"
+            type="date"
+            min="2022-06-12"
+            max="2023-05-12"
+          />
         </div>
+        <div>
+          <span class="title">Fecha de Salida </span>
+          <input
+            name="fechaFin"
+            type="date"
+            min="2022-06-12"
+            max="2023-05-12"
+          />
+        </div>
+      </div>
+      <div class="centrarFormulario redondearBordes tamanoFormulario">
+        <div class="alinearColumnas">
+          <!-- Div del título -->
+
+          <div class="alinearColumnas colorArribaAbajo">
+            <label class="centrarTitulo espacios fuenteTitulo">
+              Agregar una tarjeta de crédito o débito
+            </label>
+          </div>
+
+          <div class="colorCentro fuenteDatos">
+            <!-- Div de datos de la tarjeta -->
+
+            <div class="izqDerDatos">
+              <div class="datosTarjeta">
+                <div class="espacios">
+                  <label> Número de tarjeta </label>
+                </div>
+
+                <div class="espacios">
+                  <label> Nombre en la tarjeta </label>
+                </div>
+
+                <div class="espacios">
+                  <label> Fecha de vencimiento </label>
+                </div>
+              </div>
+
+              <div class="datosTarjetaCentro">
+                <div class="alinearColumnas">
+                  <div class="espacios">
+                    <input
+                      type="text"
+                      name="numeros"
+                      class="cuadroNumTarjeta"
+                      id="numeroTarjeta"
+                      onkeypress="return soloNumeros(event)"
+                      onpaste="return false"
+                      minlength="16"
+                      maxlength="16"
+                      placeholder="xxxx-xxxx-xxxx-xxxx"
+                      required
+                    />
+                  </div>
+                  <div class="espacios">
+                    <input
+                      type="text"
+                      name="letras"
+                      class="cuadroNombre"
+                      id="nombreTarjeta"
+                      onkeypress="return soloLetras(event)"
+                      onpaste="return false"
+                      maxlength="40"
+                      required
+                    />
+                  </div>
+
+                  <div class="alinearFilas">
+                    <div class="espacios">
+                      <select name="mes" id="mesSelected" required>
+                        <option value="1" selected>01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+
+                    <div class="espacios">
+                      <select name="anio" id="anioSelected" required>
+                        <option value="2022" selected>2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="datosTarjetaDer">
+                <label class="espacios fuenteTarjetasAceptadas">
+                  Tarjetas aceptadas:
+                </label>
+
+                <div class="alinearColumnas">
+                  <div class="alinearFilas">
+                    <img
+                      src="/assets/img/Logo Paypal.png"
+                      class="tamanoPayPal"
+                    />
+                    <img src="/assets/img/Logo Visa.png" class="tamanoVisa" />
+                  </div>
+
+                  <div class="alinearFilas">
+                    <img
+                      src="/assets/img/Logo Mastercard.png"
+                      class="tamanoMastecard"
+                    />
+                    <img
+                      src="/assets/img/Logo Mercado Pago.png"
+                      class="tamanoMercadoPago"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Div de botones -->
+
+          <div class="alinearFilas botonesDerecha colorArribaAbajo">
+            <div>
+              <button
+                type="button"
+                class="botonCancelar margenBotones"
+                id="btnCancelar"
+              >
+                Cancelar
+              </button>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="botonAgregar margenBotones"
+                id="btnAgregar"
+              >
+                Agregar tarjeta
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
+  </body>
 
-</body>
-
-<script src="/assets/js/pago/form-tarjeta.js"></script>
-<script src="/assets/js/pago/pagoScripts.js"></script>
-<script src="/assets/js/pagos/pagos.js"></script>
-
+  <script src="/assets/js/pago/form-tarjeta.js"></script>
+  <script src="/assets/js/pago/pagoScripts.js"></script>
+  <script src="/assets/js/pagos/pagos.js"></script>
 </html>

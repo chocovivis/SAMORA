@@ -2,7 +2,6 @@ import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/database.config";
 import UsuarioType from "../types/usuario.type";
 import { ClienteModel } from "./cliente.model";
-import { EmpleadoModel } from "./empleado.model";
 import { SesionModel } from "./sesion.model";
 
 export class UsuarioModel extends Model<UsuarioType> {}
@@ -50,16 +49,14 @@ UsuarioModel.init(
     tableName: "usuario",
   }
 );
-UsuarioModel.hasMany(EmpleadoModel,{
-  foreignKey: "idUsuario",
-  sourceKey: "idUsuario",
-});
 UsuarioModel.hasMany(ClienteModel,{
   foreignKey: "idUsuario",
   sourceKey: "idUsuario",
+  as: "cliente",
 });
 UsuarioModel.hasMany(SesionModel, {
   foreignKey: "idUsuario",
   sourceKey: "idUsuario",
+  as: "session",
 });
 

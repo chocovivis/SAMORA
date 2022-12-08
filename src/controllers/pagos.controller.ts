@@ -1,6 +1,10 @@
-import { Request, Response } from 'express';
-
+import { Request, Response } from "express";
+/**
+ * Regresa la vista de los pagos
+ * 
+ */
 export function pagosResponse(req: Request, res: Response) {
   const data = { title: "Pagos" };
-  return res.render("pagos");
-} 
+  let { id } = req.params;
+  return res.render("pagos", { idHabitacion: id });
+}

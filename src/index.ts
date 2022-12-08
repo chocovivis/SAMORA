@@ -1,7 +1,6 @@
 import app from "./app";
 import { sequelize } from "./database/database.config";
 //import "./database/models.config";
-
 async function main() {
   sequelize
     .sync({ alter: true })

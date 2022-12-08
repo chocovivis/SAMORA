@@ -79,7 +79,7 @@ export const eliminarReservacion = async (
 const formatoFecha = (fecha: string) => {
   return new Intl.DateTimeFormat("es", {
     day: "2-digit",
-    dayPeriod: "long",
     month: "short",
+    year: "numeric",
   }).format(new Date(fecha));
 };

@@ -27,28 +27,37 @@ ReservacionModel.init(
       type: DataTypes.STRING(15),
       allowNull: false,
     },
-    idCliente:{
+    idCliente: {
       type: DataTypes.INTEGER,
-      allowNull:false,
+      allowNull: false,
     },
-
-    
+    createdAt: {
+      type: "TIMESTAMP",
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
+      allowNull: false,
+    },
+    // updatedAt: {
+    //   type: "TIMESTAMP",
+    //   defaultValue: sequelize.literal(
+    //     "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
+    //   ),
   },
   {
     sequelize,
     tableName: "reservacion",
+    timestamps: false,
   }
 );
 //HabitacionModel.belongsToMany(ClienteModel, { through: ReservacionModel });
 //ClienteModel.belongsToMany(HabitacionModel, { through: ReservacionModel });
 
-ReservacionModel.belongsTo(ClienteModel,{
-   foreignKey: "idCliente",
-   as: "cliente",
- });
+ReservacionModel.belongsTo(ClienteModel, {
+  foreignKey: "idCliente",
+  as: "cliente",
+});
 //ClienteModel.hasMany(ReservacionModel);
 ReservacionModel.belongsTo(HabitacionModel, {
- foreignKey: "numHabitacion",
- as: "habitacion",
+  foreignKey: "numHabitacion",
+  as: "habitacion",
 });
 //HabitacionModel.hasMany(ReservacionModel);

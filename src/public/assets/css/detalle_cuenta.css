@@ -63,3 +63,19 @@ border-bottom: 70px solid white;
    width: 130px;
    height: 30px;
 }
+
+.precio-total{
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.row4{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.row4h{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+}

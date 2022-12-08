@@ -24,7 +24,7 @@ const habitacion = (() => {
   const _actionButtonEliminar = async (event) => {
     const $btn = event.target;
     const numHabitacion = $btn.getAttribute("item-id");
-    const response = await http.delete({url:`${BASE_URL}/${numHabitacion}`});
+    const response = await http.delete({ url: `${BASE_URL}/${numHabitacion}` });
     habitacion.getData();
   };
 

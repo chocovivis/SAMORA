@@ -1,9 +1,8 @@
 import express, { Application } from "express";
 import path from 'path';
 import morgan from "morgan";
-import dotenv from "dotenv";
-
-dotenv.config();
+//import dotenv from "dotenv";
+//dotenv.config();
 //Importando rutas
 import indexRouter from './routes/index.route';
 import habitacionRouter from "./routes/habitacion.route";
@@ -60,7 +59,7 @@ app.use('/admon', adminRouter);
 app.use('/registro', registroRouter);
 app.use('/servicios', servicioRouter);
 app.use('/loggin', logginRouter);
-app.use('/empleado', empleadoRouter);
+
 app.use('/cliente', clienteRouter);
 app.use('/reporte', reporteRouter);
 app.use('/cliente',clienteRouter);

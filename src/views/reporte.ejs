@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("comunes/componentes/headers-components")-%>
+    <link rel="stylesheet" href="assets/css/reporte.css" />
+    <script src="/assets/js/chart/dist/chart.umd.js"></script>
+    <title>Reporte</title>
+  </head>
+  <body class="background-reporte">
+    <header>
+      <%-include ("comunes/componentes/barra_lateral",{isAdmin}) -%>
+    </header>
+    <div class="contenedor-titulo">
+      <h1 class="titulo-reporte">Reporte</h1>
+    </div>
+
+    <section class="contenedor-reporte centrar-elemento">
+      <div class="circulo-grafica">
+        <canvas id="circulo"></canvas>
+      </div>
+      <div class="barra">
+        <div class="linea-grafica">
+          <canvas id="linea"></canvas>
+        </div>
+        <div class="barra-grafica">
+          <canvas id="barra"></canvas>
+        </div>
+      </div>
+    </section>
+    <script src="/assets/js/reporte/barras.js"></script>
+    <script src="/assets/js/reporte/linea.js"></script>
+    <script src="/assets/js/reporte/circulo.js"></script>
+  </body>
+</html>

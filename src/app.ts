@@ -24,6 +24,7 @@ import logginRouter from "./routes/loggin.route";
 import { sessionConfig ,sessionMiddleware } from "./middlewares/express-session.middleware";
 import empleadoRouter from "./routes/empleado.route";
 import clienteRouter from "./routes/cliente.route";
+import reporteRouter from "./routes/reporte.route";
 
 //inicializaciones
 const app:Application = express();
@@ -61,6 +62,7 @@ app.use('/servicios',servicioRouter);
 app.use('/loggin', logginRouter);
 app.use('/empleado',empleadoRouter);
 app.use('/cliente',clienteRouter);
+app.use('/reporte',reporteRouter);
 
 
 

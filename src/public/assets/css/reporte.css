@@ -1,0 +1,38 @@
+.background-reporte {
+  background-color: #135c7d;
+}
+.contenedor-titulo {
+  width: 100%;
+  padding-top: 2rem;
+  font-family: pptelegraf;
+}
+
+.titulo-reporte {
+  text-align: center;
+  color: white;
+  margin: 0px;
+  font-size: 30px;
+  font-family: pptelegraf;
+}
+.contenedor-reporte {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.circulo-grafica{
+  width: 36%;
+}
+
+.barra{
+  width: 37%;
+}
+.linea-grafica{
+  margin-bottom: 2rem;
+}
+.centrar-elemento {
+  display: flex;
+  justify-content: space-around;
+}
